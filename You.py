@@ -8,27 +8,93 @@ from multiprocessing import Pool, Process
 from ffmpy import FFmpeg
 import time, random, asyncio, timeit, sys, json, codecs, threading, glob, re, string, os, requests, subprocess, six, urllib, urllib.parse, ast, pytz, wikipedia, pafy, youtube_dl, atexit
 
-cl = RIDEN()
-#AcToken = "YOUR TOKEN"
-#cl = RIDEN(authTokenRFU=AcToken)
+#cl = RIDEN()
+cl = RIDEN(authTokenRFU="EwBKIgTRxi6XboYagtR9.01eD1U2qXh8Zi0WWzaO7Yq.07GM1gYdN6itN5dsjOLCqDODoslXZf7ournf48ej/VA=")
 cl.log("YOUR TOKEN : {}".format(str(cl.authToken)))
 channel = RIDENChannel(cl,cl.server.CHANNEL_ID['LINE_TIMELINE'])
 cl.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
-print ("LOGIN SUCCESS\n")
-def Author(Owner):
-    try:
-        author = "Author {}".format(cl.getContact(Author).displayName)
-        print(auhtor)
-    except Exception as error:
-        print(error)
+
+#riden1 = RIDEN()
+riden1 = RIDEN(authTokenRFU="EwuT4sRvmF3U6yLO8blf.a1QVT/QlosuRjiHwpVX5VW.H1Eu3ua4cA3DckQ7jp6Xk0bCL1E8HSfyKvauTJx4qSM=")
+riden1.log("YOUR TOKEN : {}".format(str(riden1.authToken)))
+channel = RIDENChannel(riden1,riden1.server.CHANNEL_ID['LINE_TIMELINE'])
+riden1.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
+
+#riden2 = RIDEN()
+#riden2 = RIDEN(authTokenRFU="EwYRdytxSIqQYb1FuAN6.WKcub2t+uJueUYfdC1qAbG.kcuE5u3klvfwd1IYM+zs5xkxbo3+pIsLrjZ/Um1ti5U=")
+#riden2.log("YOUR TOKEN : {}".format(str(riden2.authToken)))
+#channel = RIDENChannel(riden2,riden2.server.CHANNEL_ID['LINE_TIMELINE'])
+#riden2.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
+
+#riden3 = RIDEN()
+#riden3 = RIDEN(authTokenRFU="EwzQfNY5yaHg3Rs3OIy9.WrtAVyZDRBvprHExwvnXkq.5lj592fbau7e3dxelya1Ih8v9FHQpCe09CU7Jrf66xU=")
+#riden3.log("YOUR TOKEN : {}".format(str(riden3.authToken)))
+#channel = RIDENChannel(riden3,riden3.server.CHANNEL_ID['LINE_TIMELINE'])
+#riden3.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
+
+#riden4 = RIDEN()
+#riden4 = RIDEN(authTokenRFU="EwPYN0FSJU0JDHi4hWl6.uEr21FsOaeuLSWAmhT6MLG.GUW49h6Z9j04PmS0EyEtIqOAFQkTkAwAcJ/DRgND10M=")
+#riden4.log("YOUR TOKEN : {}".format(str(riden4.authToken)))
+#channel = RIDENChannel(riden4,riden4.server.CHANNEL_ID['LINE_TIMELINE'])
+#riden4.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
+
+#riden5 = RIDEN()
+#riden5 = RIDEN(authTokenRFU="EwbrWv7qWM8v94CdUyK5.Sz2c6sOTITJoE7jUS5iGXq.FDG0JGe4PkMZwquZtC2ht1esMg7CC++qcFyPlMYSr/Q=")
+#riden5.log("YOUR TOKEN : {}".format(str(riden5.authToken)))
+#channel = RIDENChannel(riden5,riden5.server.CHANNEL_ID['LINE_TIMELINE'])
+#riden5.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
+
+#riden6 = RIDEN()
+#riden6 = RIDEN(authTokenRFU="EwzQtRP0ncBWcdjdpjg5.u+xXLFQSlbSB6sUpVT4zzq.772R8hojuD36MeWapgIUQnCMyOKAUEpCa7I5wcJQ6zE=")
+#riden6.log("YOUR TOKEN : {}".format(str(riden6.authToken)))
+#channel = RIDENChannel(riden6,riden6.server.CHANNEL_ID['LINE_TIMELINE'])
+#riden6.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
+
+#riden7 = RIDEN()
+#riden7 = RIDEN(authTokenRFU="EwkYEgwbk6VUfHK5Tewf.SRsUzuDklMrk69jt3WvkhW.jigL8Rxr9t6I/fpBkf1cEjg1DolBqhezX8k8vpsPnQs=")
+#riden7.log("YOUR TOKEN : {}".format(str(riden7.authToken)))
+#channel = RIDENChannel(riden7,riden7.server.CHANNEL_ID['LINE_TIMELINE'])
+#riden7.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
+
+#riden8 = RIDEN()
+#riden8 = RIDEN(authTokenRFU="Ew91coutN2nBG5cihRI3.NFnOcElHuDdTQG5zISlFKW.jiFt9BmKDxIShf6PHAtaRgJxLsawVmpLvLoCTggJZyw=")
+#riden8.log("YOUR TOKEN : {}".format(str(riden8.authToken)))
+#channel = RIDENChannel(riden8,riden8.server.CHANNEL_ID['LINE_TIMELINE'])
+#riden8.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
+
+#riden9 = RIDEN()
+#riden9 = RIDEN(authTokenRFU="EwrFEPERf8My3Q9BdKac.XwGHfami0C6EGZ533rnqZa.3n1R+i5/pqpAFhMiHN52G0zxJ+9/Tlrtd0Zccz/K+Sc=")
+#riden9.log("YOUR TOKEN : {}".format(str(riden9.authToken)))
+#channel = RIDENChannel(riden9,riden9.server.CHANNEL_ID['LINE_TIMELINE'])
+#riden9.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
+
+#riden10 = RIDEN()
+#riden10 = RIDEN(authTokenRFU="EwFZogXW3THy9KnwDRv5.4DANLenrmne5/CxD4zQP5q.pDWYzrGYkwh0ZakYaDNMdrUHm7iBrmLRNc1QPBl7Sbk=")
+#riden10.log("YOUR TOKEN : {}".format(str(riden10.authToken)))
+#channel = RIDENChannel(riden10,riden10.server.CHANNEL_ID['LINE_TIMELINE'])
+#riden10.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
+
+print ("BY:【YOU SELF BOT】")
+
 clProfile = cl.getProfile()
 clSettings = cl.getSettings()
 RIDEN = RIDENPoll(cl)
-INDUK = cl.profile.mid
-Rfu = [cl]
-RfuBot=[INDUK]
-Owner=["u4862fe4b182b2fd194a3108e2f3662e8"]
-RfuSekawan = Rfu + RfuBot + Owner
+
+Rfu = [cl,riden1]
+mid = cl.profile.mid
+JSMID1 = riden1.profile.mid
+#JSMID2 = riden2.profile.mid
+#JSMID3 = riden3.profile.mid
+#JSMID4 = riden4.profile.mid
+#JSMID5 = riden5.profile.mid
+#JSMID6 = riden6.profile.mid
+#JSMID7 = riden7.profile.mid
+#JSMID8 = riden8.profile.mid
+#JSMID9 = riden9.profile.mid
+#JSMID10 = riden10.profile.mid
+RfuBot=[mid,JSMID1]
+Owner=["ud3511dd6ed90c47f33234c30640a3bc9"]
+RfuSekawan = RfuBot + Rfu + Owner
 
 contact = cl.getProfile()
 backup = cl.getProfile()
@@ -40,11 +106,11 @@ Squad = {
     "UnsendPesan":True,
     "SpamInvite":False,
     "Contact":False,
-    "GName":"【さัএπัஞ✵ບิथℓℓҨतΩ】",
-    "AutoRespon":False,
+    "GName":"【YOU SELF BOT】",
+    "AutoRespon":True,
     "KickRespon":False,
     "KillOn":False,
-    "KickOn":False,
+    "KickOn":True,
     "Upfoto":False,
     "UpfotoBot":False,
     "UpfotoGroup":False,
@@ -52,20 +118,20 @@ Squad = {
     "Invite":False,
     "Copy":False,
     "autoAdd":True,
-    "PesanAdd":"Terima Kasih Sudah Add Saya",
+    "PesanAdd":"แอดทำไม มีไรว่ามา",
     "ContactAdd":{},
     "autoBlock":False,
     "autoJoin":True,
-    "AutojoinTicket":False,
+    "AutojoinTicket":True,
     "AutoReject":False,
-    "AutoRead":False,
+    "autoRead":False,
     "IDSticker":False,
     "Timeline":False,
     "Welcome":True,
     "BackupBot":True,
-    "WcText": "Welcome My Friend",
+    "WcText": "หวัดดีคร๊าบบ",
     "Leave":False,
-    "LvText": "See You My Friend",
+    "WvText": "บายๆ บักหำ",
     "Mic":False,
     "MicDel":False,
     "Adminadd":False,
@@ -78,9 +144,10 @@ Squad = {
     "Blacklist":{},
     "Ban":False,
     "Unban":False,
-    "FancyFoto":False,
+    "AddMention":True,
     "Admin": {
-        "u4862fe4b182b2fd194a3108e2f3662e8":True #MID ADMIN TARO DISINI
+        "ud3511dd6ed90c47f33234c30640a3bc9":True,  #TARO MID ADMIN NYA DISINI
+        "u035aafb7ea8b39252b2488563efc79bf":True
     },
 }
 
@@ -129,6 +196,14 @@ ProfileMe["displayName"] = clProfile.displayName
 ProfileMe["statusMessage"] = clProfile.statusMessage
 ProfileMe["pictureStatus"] = clProfile.pictureStatus
 
+RfuProtect = {
+    'protect':False,
+    'linkprotect':False,
+    'inviteprotect':False,
+    'cancelprotect':False,
+    'ProtectCancelled':False,
+}
+
 RfuCctv={
     "Point1":{},
     "Point2":{},
@@ -136,122 +211,35 @@ RfuCctv={
 }
 
 Help ="""SELF BOT PYTHON 3 
-BY:【さัএπัஞ✵ບิथℓℓҨतΩ】 
-
-me
-my name
-my bio
-my picture
-my cover
-my video
-speed
-rename
-my bot
-my team
-stealname [@]
-stealbio [@]
-stealpict [@]
-stealcover [@]
-stealvideo [@]
-stealmid [@]
-profile [@]
-spam on [jmlah teks]
-cekmid: [mid]
-banlock [@]
-banlist
-contact ban
-clear ban
-blocklist
-friendlist
-friendlist mid
-runtime
-broadcast:
-contactbc:
-adminadd [@]
-admindel [@]
-admin:add-on
-admin:del-on
-changename:
-changebio:
-remove pesan
-restart
-bot logout
-kick [@]
-status
-unsend on/off
-changepp on/off
-timeline on/off
-autojoin on/off
-autoreject on/off
-auto jointicket on/off
-gift:on/off
-copy on/off
-clone [@]
-comeback
-steal on/off
-contact on/off
-mic:add-on
-mic:del-on
-mimic on/off
-mimiclist
-refresh
-___[ GROUP ]___
-leaveall grup
-kick [on,off->kickall]
-invite on/off
-kill on/off
-rejectall grup
-lurking on/off/reset
-lurking read
-sider on/off
-mentionall
-welcome on/off
-changewelcome:
-leave on/off
-changeleave:
-memberlist
-link on/off
-my grup
-gurl
-gcreator
-invite gcreator
-ginfo
-grup id
-cfotogrup on/off
-spaminvite on/off
-announce
-___[ MEDIA ]____
-topnews
-data birth:
-urban:
-sslink:
-maps:
-cekcuaca:
-jadwalshalat:
-idline:
-say-id:
-say-en:
-say-jp:
-say-ar:
-say-ko:
-apakah:
-kapan:
-wikipedia:
-kalender
-image:
-youtube:
-___[ TRANSLATOR ]___
-indonesian:
-english:
-korea:
-japan:
-thailand:
-arab:
-malaysia:
-jawa:
-
-         THANKS TO 
-BY:【さัএπัஞ✵ບิथℓℓҨतΩ】
+╔════════════════╗
+╠❂➣【YOU SELF BOT】 
+╠════════════════╝
+╠❂➣ คท
+╠❂➣ ชื่อ
+╠❂➣ ใครสร้างกลุ่ม
+╠❂➣ คนในกลุ่ม
+╠❂➣ เปิดจุด
+╠❂➣ ปิดจุด
+╠❂➣ สปีด
+╠❂➣ เปิดแอบ
+╠❂➣ ปิดแอบ
+╠❂➣ แทค
+╠❂➣ รีบอท
+╠❂➣ ปิดบอท
+╠❂➣ เตะ @
+╠❂➣ เปิดมุดลิ้ง
+╠❂➣ ปิดมุดลิ้ง
+╠❂➣ มา
+╠❂➣ ไป
+╠❂➣ เตะเปิด
+╠❂➣ เตะปิด
+╠❂➣ เชคดำ
+╠❂➣ ล้างดำ
+╠❂➣ ลงดำคท
+╠❂➣ เปิดลิ้ง
+╠❂➣ ปิดลิ้ง
+╚════════════════╝
+By:【YOU SELF BOT】
 """"________________________"
 
 #------------------------------------------------ SCRIP DEF ----------------------------------------------------------#
@@ -273,20 +261,153 @@ def RIDEN_FAST_USER(fast):
     try:
         if fast.type == 0:
             return
+        if fast.type == 5:
+            if Squad["autoAdd"] == True:
+                if (Squad["PesanAdd"] in [""," ","\n",None]):
+                    pass
+                else:
+                    Squad["ContactAdd"][fast.param2] = True
+                    usr = cl.getContact(op.param2)
+                    cl.sendMessage(fast.param1, "Haii {} " + str(Squad["PesanAdd"]).format(usr.displayName))
+                    cl.sendMessage(fast.param1, None, contentMetadata={'mid':mid}, contentType=13)
+
+        if fast.type == 5:
+            if Squad['autoBlock'] == True:
+                try:
+                    usr = cl.getContact(op.param2)
+                    cl.sendMessage(fast.param1, "Haii {} Sorry Auto Block , Komen di TL dulu ya kalo akun asli baru di unblock".format(usr.displayName))
+                    cl.talk.blockContact(0, fast.param1)
+                    Squad["Blacklist"][fast.param2] = True
+                except Exception as e:
+                	cl.log("[SEND_MESSAGE] ERROR : " + str(e))
+
+#--------------------------------------------- PARAM SCRIP AUTO JOIN BOT & AUTO REJECT ------------------------------------------------#
+
         if fast.type == 13:
-            if INDUK in fast.param3:
+            if mid in fast.param3:
               if Squad['autoJoin'] == True:
+                if fast.param2 in RfuSekawan and fast.param2 in Squad["Admin"]:
                     cl.acceptGroupInvitation(fast.param1)
                     print ("ANDA JOIN DI GRUP")
+            if JSMID1 in fast.param3:
+              if Squad['autoJoin'] == True:
+                if fast.param2 in RfuSekawan and fast.param2 in Squad["Admin"]:
+                    riden1.acceptGroupInvitation(fast.param1)
+                    print ("BOT 1 JOIN GRUP")
+            if JSMID2 in fast.param3:
+              if Squad['autoJoin'] == True:
+                if fast.param2 in RfuSekawan and fast.param2 in Squad["Admin"]:
+                    riden2.acceptGroupInvitation(fast.param1)
+                    print ("BOT 2 JOIN GRUP")
+            if JSMID3 in fast.param3:
+              if Squad['autoJoin'] == True:
+                if fast.param2 in RfuSekawan and fast.param2 in Squad["Admin"]:
+                    riden3.acceptGroupInvitation(fast.param1)
+                    print ("BOT 3 JOIN GRUP")
+            if JSMID4 in fast.param3:
+              if Squad['autoJoin'] == True:
+                if fast.param2 in RfuSekawan and fast.param2 in Squad["Admin"]:
+                    riden4.acceptGroupInvitation(fast.param1)
+                    print ("BOT 4 JOIN GRUP")
+            if JSMID5 in fast.param3:
+              if Squad['autoJoin'] == True:
+                if fast.param2 in RfuSekawan and fast.param2 in Squad["Admin"]:
+                    riden5.acceptGroupInvitation(fast.param1)
+                    print ("BOT 5 JOIN GRUP")
+            if JSMID6 in fast.param3:
+              if Squad['autoJoin'] == True:
+                if fast.param2 in RfuSekawan and fast.param2 in Squad["Admin"]:
+                    riden6.acceptGroupInvitation(fast.param1)
+                    print ("BOT 6 JOIN GRUP")
+            if JSMID7 in fast.param3:
+              if Squad['autoJoin'] == True:
+                if fast.param2 in RfuSekawan and fast.param2 in Squad["Admin"]:
+                    riden7.acceptGroupInvitation(fast.param1)
+                    print ("BOT 7 JOIN GRUP")
+            if JSMID8 in fast.param3:
+              if Squad['autoJoin'] == True:
+                if fast.param2 in RfuSekawan and fast.param2 in Squad["Admin"]:
+                    riden8.acceptGroupInvitation(fast.param1)
+                    print ("BOT 8 JOIN GRUP")
+            if JSMID9 in fast.param3:
+              if Squad['autoJoin'] == True:
+                if fast.param2 in RfuSekawan and fast.param2 in Squad["Admin"]:
+                    riden9.acceptGroupInvitation(fast.param1)
+                    print ("BOT 9 JOIN GRUP")
+            if JSMID10 in fast.param3:
+              if Squad['autoJoin'] == True:
+                if fast.param2 in RfuSekawan and fast.param2 in Squad["Admin"]:
+                    riden10.acceptGroupInvitation(fast.param1)
+                    print ("BOT 9 JOIN GRUP")
                     pass
 
         if fast.type == 13:
-            if INDUK in fast.param3:
+            if mid in fast.param3:
               if Squad['AutoReject'] == True:
                 if fast.param2 not in RfuSekawan and fast.param2 not in Squad["Admin"]:
                     gid = cl.getGroupIdsInvited()
                     for i in gid:
                         cl.rejectGroupInvitation(i)
+            if JSMID1 in fast.param3:
+              if Squad["AutoReject"] == True:
+                if fast.param2 not in RfuSekawan and fast.param2 not in Squad["Admin"]:
+                    gid = riden1.getGroupIdsInvited()
+                    for i in gid:
+                        riden1.rejectGroupInvitation(i)
+            if JSMID2 in fast.param3:
+              if Squad["AutoReject"] == True:
+                if fast.param2 not in RfuSekawan and fast.param2 not in Squad["Admin"]:
+                    gid = riden2.getGroupIdsInvited()
+                    for i in gid:
+                        riden2.rejectGroupInvitation(i)
+            if JSMID3 in fast.param3:
+              if Squad["AutoReject"] == True:
+                if fast.param2 not in RfuSekawan and fast.param2 not in Squad["Admin"]:
+                    gid = riden3.getGroupIdsInvited()
+                    for i in gid:
+                        riden3.rejectGroupInvitation(i)
+            if JSMID4 in fast.param3:
+              if Squad["AutoReject"] == True:
+                if fast.param2 not in RfuSekawan and fast.param2 not in Squad["Admin"]:
+                    gid = riden4.getGroupIdsInvited()
+                    for i in gid:
+                        riden4.rejectGroupInvitation(i)
+            if JSMID5 in fast.param3:
+              if Squad["AutoReject"] == True:
+                if fast.param2 not in RfuSekawan and fast.param2 not in Squad["Admin"]:
+                    gid = riden5.getGroupIdsInvited()
+                    for i in gid:
+                        riden5.rejectGroupInvitation(i)
+            if JSMID6 in fast.param3:
+              if Squad["AutoReject"] == True:
+                if fast.param2 not in RfuSekawan and fast.param2 not in Squad["Admin"]:
+                    gid = riden6.getGroupIdsInvited()
+                    for i in gid:
+                        riden6.rejectGroupInvitation(i)
+            if JSMID7 in fast.param3:
+              if Squad["AutoReject"] == True:
+                if fast.param2 not in RfuSekawan and fast.param2 not in Squad["Admin"]:
+                    gid = riden7.getGroupIdsInvited()
+                    for i in gid:
+                        riden7.rejectGroupInvitation(i)
+            if JSMID8 in fast.param3:
+              if Squad["AutoReject"] == True:
+                if fast.param2 not in RfuSekawan and fast.param2 not in Squad["Admin"]:
+                    gid = riden8.getGroupIdsInvited()
+                    for i in gid:
+                        riden8.rejectGroupInvitation(i)
+            if JSMID9 in fast.param3:
+              if Squad["AutoReject"] == True:
+                if fast.param2 not in RfuSekawan and fast.param2 not in Squad["Admin"]:
+                    gid = riden9.getGroupIdsInvited()
+                    for i in gid:
+                        riden9.rejectGroupInvitation(i)
+            if JSMID10 in fast.param3:
+              if Squad["AutoReject"] == True:
+                if fast.param2 not in RfuSekawan and fast.param2 not in Squad["Admin"]:
+                    gid = riden10.getGroupIdsInvited()
+                    for i in gid:
+                        riden10.rejectGroupInvitation(i)
                         pass
 
 #------------------- ( 1 ) ------------------------- PEMBATAS SCRIP SIDER & WC LV ------------------------------------------------#
@@ -344,9 +465,614 @@ def RIDEN_FAST_USER(fast):
                     cl.sendMessage(fast.param1, None, contentMetadata={'mid':fast.param2}, contentType=13)
                     print ("MEMBER HAS LEFT THE GROUP")
 
+#--------------------------------------------- PARAM SCRIP FOR BACKUP BOT ------------------------------------------------#
+
+        if fast.type == 19:
+          if Squad["BackupBot"] == True:
+            if mid in fast.param3:
+              if fast.param2 in RfuBot:
+                if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+                    pass
+                else:
+                    Squad["Blacklist"][fast.param2] = True
+                    f=codecs.open('st2__b.json','w','utf-8')
+                    json.dump(Squad, f, sort_keys=True, indent=4,ensure_ascii=False)
+                    try:
+                        riden1.findAndAddContactsByMid(fast.param3)
+                        riden1.kickoutFromGroup(fast.param1,[fast.param2])
+                        riden1.inviteIntoGroup(fast.param1,[fast.param3])
+                        cl.acceptGroupInvitation(fast.param1)
+                    except:
+                        try:
+                            riden2.findAndAddContactsByMid(fast.param3)
+                            riden2.kickoutFromGroup(fast.param1,[fast.param2])
+                            riden2.inviteIntoGroup(fast.param1,[fast.param3])
+                            cl.acceptGroupInvitation(fast.param1)
+                        except:
+                            try:
+                                riden3.findAndAddContactsByMid(fast.param3)
+                                riden3.kickoutFromGroup(fast.param1,[fast.param2])
+                                riden3.inviteIntoGroup(fast.param1,[fast.param3])
+                                cl.acceptGroupInvitation(fast.param1)
+                            except:
+                                try:
+                                    x = riden1.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = False
+                                    riden1.updateGroup(x)
+                                    Riden = riden1.reissueGroupTicket(fast.param1)
+                                    cl.acceptGroupInvitationByTicket(fast.param1,Riden)
+                                    riden1.acceptGroupInvitationByTicket(fast.param1,Riden)
+                                    riden2.acceptGroupInvitationByTicket(fast.param1,Riden)
+                                    riden3.acceptGroupInvitationByTicket(fast.param1,Riden)
+                                    x = cl.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = True
+                                    cl.updateGroup(x)
+                                    riden1.kickoutFromGroup(fast.param1,[fast.param2])
+                                    Riden = cl.reissueGroupTicket(fast.param1)
+                                except:
+                                    pass
+                return
+            
+            if JSMID1 in fast.param3:
+              if fast.param2 in RfuBot:
+                if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+                    pass
+                else:
+                    Squad["Blacklist"][fast.param2] = True
+                    f=codecs.open('st2__b.json','w','utf-8')
+                    json.dump(Squad, f, sort_keys=True, indent=4,ensure_ascii=False)
+                    try:
+                        riden2.findAndAddContactsByMid(fast.param3)
+                        riden2.kickoutFromGroup(fast.param1,[fast.param2])
+                        riden2.inviteIntoGroup(fast.param1,[fast.param3])
+                        riden1.acceptGroupInvitation(fast.param1)
+                    except:
+                        try:
+                            riden3.findAndAddContactsByMid(fast.param3)
+                            riden3.kickoutFromGroup(fast.param1,[fast.param2])
+                            riden3.inviteIntoGroup(fast.param1,[fast.param3])
+                            riden1.acceptGroupInvitation(fast.param1)
+                        except:
+                            try:
+                                cl.findAndAddContactsByMid(fast.param3)
+                                cl.kickoutFromGroup(fast.param1,[fast.param2])
+                                cl.inviteIntoGroup(fast.param1,[fast.param3])
+                                riden1.acceptGroupInvitation(fast.param1)
+                            except:
+                                try:
+                                    x = riden2.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = False
+                                    riden2.updateGroup(x)
+                                    Riden = riden2.reissueGroupTicket(fast.param1)
+                                    riden1.acceptGroupInvitationByTicket(fast.param1,Riden)
+                                    x = riden1.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = True
+                                    riden1.updateGroup(x)
+                                    riden2.kickoutFromGroup(fast.param1,[fast.param2])
+                                    Ticket = riden1.reissueGroupTicket(fast.param1)
+                                except:
+                                    pass
+                return
+
+            if JSMID2 in fast.param3:
+              if fast.param2 in RfuBot:
+                if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+                    pass
+                else:
+                    Squad["Blacklist"][fast.param2] = True
+                    f=codecs.open('st2__b.json','w','utf-8')
+                    json.dump(Squad, f, sort_keys=True, indent=4,ensure_ascii=False)
+                    try:
+                        cl.findAndAddContactsByMid(fast.param3)
+                        cl.kickoutFromGroup(fast.param1,[fast.param2])
+                        cl.inviteIntoGroup(fast.param1,[fast.param3])
+                        riden2.acceptGroupInvitation(fast.param1)
+                    except:
+                        try:
+                            riden1.findAndAddContactsByMid(fast.param3)
+                            riden1.kickoutFromGroup(fast.param1,[fast.param2])
+                            riden1.inviteIntoGroup(fast.param1,[fast.param3])
+                            riden2.acceptGroupInvitation(fast.param1)
+                        except:
+                            try:
+                                riden3.findAndAddContactsByMid(fast.param3)
+                                riden3.kickoutFromGroup(fast.param1,[fast.param2])
+                                riden3.inviteIntoGroup(fast.param1,[fast.param3])
+                                riden2.acceptGroupInvitation(fast.param1)
+                            except:
+                                try:
+                                    x = cl.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = False
+                                    cl.updateGroup(x)
+                                    Riden = cl.reissueGroupTicket(fast.param1)
+                                    riden2.acceptGroupInvitationByTicket(fast.param1,Riden)
+                                    x = riden2.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = True
+                                    riden2.updateGroup(x)
+                                    riden3.kickoutFromGroup(fast.param1,[fast.param2])
+                                    Ticket = riden2.reissueGroupTicket(fast.param1)
+                                except:
+                                    pass
+                return
+
+            if JSMID3 in fast.param3:
+              if fast.param2 in RfuBot:
+                if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+                    pass
+                else:
+                    Squad["Blacklist"][fast.param2] = True
+                    f=codecs.open('st2__b.json','w','utf-8')
+                    json.dump(Squad, f, sort_keys=True, indent=4,ensure_ascii=False)
+                    try:
+                        cl.findAndAddContactsByMid(fast.param3)
+                        cl.kickoutFromGroup(fast.param1,[fast.param2])
+                        cl.inviteIntoGroup(fast.param1,[fast.param3])
+                        riden3.acceptGroupInvitation(fast.param1)
+                    except:
+                        try:
+                            riden1.findAndAddContactsByMid(fast.param3)
+                            riden1.kickoutFromGroup(fast.param1,[fast.param2])
+                            riden1.inviteIntoGroup(fast.param1,[fast.param3])
+                            riden3.acceptGroupInvitation(fast.param1)
+                        except:
+                            try:
+                                riden2.findAndAddContactsByMid(fast.param3)
+                                riden2.kickoutFromGroup(fast.param1,[fast.param2])
+                                riden2.inviteIntoGroup(fast.param1,[fast.param3])
+                                riden3.acceptGroupInvitation(fast.param1)
+                            except:
+                                try:
+                                    x = cl.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = False
+                                    cl.updateGroup(x)
+                                    Riden = cl.reissueGroupTicket(fast.param1)
+                                    riden3.acceptGroupInvitationByTicket(fast.param1,Riden)
+                                    x = riden3.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = True
+                                    riden2.updateGroup(x)
+                                    cl.kickoutFromGroup(fast.param1,[fast.param2])
+                                    Ticket = riden3.reissueGroupTicket(fast.param1)
+                                except:
+                                    pass
+                return
+
+            if JSMID4 in fast.param3:
+              if fast.param2 in RfuBot:
+                if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+                    pass
+                else:
+                    Squad["Blacklist"][fast.param2] = True
+                    f=codecs.open('st2__b.json','w','utf-8')
+                    json.dump(Squad, f, sort_keys=True, indent=4,ensure_ascii=False)
+                    try:
+                        riden5.findAndAddContactsByMid(fast.param3)
+                        riden5.kickoutFromGroup(fast.param1,[fast.param2])
+                        riden5.inviteIntoGroup(fast.param1,[fast.param3])
+                        riden4.acceptGroupInvitation(fast.param1)
+                    except:
+                        try:
+                            riden6.findAndAddContactsByMid(fast.param3)
+                            riden6.kickoutFromGroup(fast.param1,[fast.param2])
+                            riden6.inviteIntoGroup(fast.param1,[fast.param3])
+                            riden4.acceptGroupInvitation(fast.param1)
+                        except:
+                            try:
+                                riden7.findAndAddContactsByMid(fast.param3)
+                                riden7.kickoutFromGroup(fast.param1,[fast.param2])
+                                riden7.inviteIntoGroup(fast.param1,[fast.param3])
+                                riden4.acceptGroupInvitation(fast.param1)
+                            except:
+                                try:
+                                    x = riden8.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = False
+                                    riden8.updateGroup(x)
+                                    Riden = riden8.reissueGroupTicket(fast.param1)
+                                    riden4.acceptGroupInvitationByTicket(fast.param1,Riden)
+                                    x = riden4.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = True
+                                    riden4.updateGroup(x)
+                                    riden8.kickoutFromGroup(fast.param1,[fast.param2])
+                                    Ticket = riden4.reissueGroupTicket(fast.param1)
+                                except:
+                                    pass
+                return
+
+            if JSMID5 in fast.param3:
+              if fast.param2 in RfuBot:
+                if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+                    pass
+                else:
+                    Squad["Blacklist"][fast.param2] = True
+                    f=codecs.open('st2__b.json','w','utf-8')
+                    json.dump(Squad, f, sort_keys=True, indent=4,ensure_ascii=False)
+                    try:
+                        riden6.findAndAddContactsByMid(fast.param3)
+                        riden6.kickoutFromGroup(fast.param1,[fast.param2])
+                        riden6.inviteIntoGroup(fast.param1,[fast.param3])
+                        riden5.acceptGroupInvitation(fast.param1)
+                    except:
+                        try:
+                            riden7.findAndAddContactsByMid(fast.param3)
+                            riden7.kickoutFromGroup(fast.param1,[fast.param2])
+                            riden7.inviteIntoGroup(fast.param1,[fast.param3])
+                            riden5.acceptGroupInvitation(fast.param1)
+                        except:
+                            try:
+                                riden8.findAndAddContactsByMid(fast.param3)
+                                riden8.kickoutFromGroup(fast.param1,[fast.param2])
+                                riden8.inviteIntoGroup(fast.param1,[fast.param3])
+                                riden5.acceptGroupInvitation(fast.param1)
+                            except:
+                                try:
+                                    x = riden9.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = False
+                                    riden9.updateGroup(x)
+                                    Riden = riden9.reissueGroupTicket(fast.param1)
+                                    riden5.acceptGroupInvitationByTicket(fast.param1,Riden)
+                                    x = riden5.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = True
+                                    riden5.updateGroup(x)
+                                    riden9.kickoutFromGroup(fast.param1,[fast.param2])
+                                    Ticket = riden5.reissueGroupTicket(fast.param1)
+                                except:
+                                    pass
+                return
+
+            if JSMID6 in fast.param3:
+              if fast.param2 in RfuBot:
+                if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+                    pass
+                else:
+                    Squad["Blacklist"][fast.param2] = True
+                    f=codecs.open('st2__b.json','w','utf-8')
+                    json.dump(Squad, f, sort_keys=True, indent=4,ensure_ascii=False)
+                    try:
+                        riden7.findAndAddContactsByMid(fast.param3)
+                        riden7.kickoutFromGroup(fast.param1,[fast.param2])
+                        riden7.inviteIntoGroup(fast.param1,[fast.param3])
+                        riden6.acceptGroupInvitation(fast.param1)
+                    except:
+                        try:
+                            riden8.findAndAddContactsByMid(fast.param3)
+                            riden8.kickoutFromGroup(fast.param1,[fast.param2])
+                            riden8.inviteIntoGroup(fast.param1,[fast.param3])
+                            riden6.acceptGroupInvitation(fast.param1)
+                        except:
+                            try:
+                                riden9.findAndAddContactsByMid(fast.param3)
+                                riden9.kickoutFromGroup(fast.param1,[fast.param2])
+                                riden9.inviteIntoGroup(fast.param1,[fast.param3])
+                                riden6.acceptGroupInvitation(fast.param1)
+                            except:
+                                try:
+                                    x = riden10.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = False
+                                    riden10.updateGroup(x)
+                                    Riden = riden10.reissueGroupTicket(fast.param1)
+                                    riden6.acceptGroupInvitationByTicket(fast.param1,Riden)
+                                    x = riden6.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = True
+                                    riden6.updateGroup(x)
+                                    riden10.kickoutFromGroup(fast.param1,[fast.param2])
+                                    Ticket = riden6.reissueGroupTicket(fast.param1)
+                                except:
+                                    pass
+                return
+
+            if JSMID7 in fast.param3:
+              if fast.param2 in RfuBot:
+                if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+                    pass
+                else:
+                    Squad["Blacklist"][fast.param2] = True
+                    f=codecs.open('st2__b.json','w','utf-8')
+                    json.dump(Squad, f, sort_keys=True, indent=4,ensure_ascii=False)
+                    try:
+                        riden8.findAndAddContactsByMid(fast.param3)
+                        riden8.kickoutFromGroup(fast.param1,[fast.param2])
+                        riden8.inviteIntoGroup(fast.param1,[fast.param3])
+                        riden7.acceptGroupInvitation(fast.param1)
+                    except:
+                        try:
+                            riden9.findAndAddContactsByMid(fast.param3)
+                            riden9.kickoutFromGroup(fast.param1,[fast.param2])
+                            riden9.inviteIntoGroup(fast.param1,[fast.param3])
+                            riden7.acceptGroupInvitation(fast.param1)
+                        except:
+                            try:
+                                riden10.findAndAddContactsByMid(fast.param3)
+                                riden10.kickoutFromGroup(fast.param1,[fast.param2])
+                                riden10.inviteIntoGroup(fast.param1,[fast.param3])
+                                riden7.acceptGroupInvitation(fast.param1)
+                            except:
+                                try:
+                                    x = riden1.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = False
+                                    riden1.updateGroup(x)
+                                    Riden = riden1.reissueGroupTicket(fast.param1)
+                                    riden7.acceptGroupInvitationByTicket(fast.param1,Riden)
+                                    x = riden7.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = True
+                                    riden7.updateGroup(x)
+                                    riden1.kickoutFromGroup(fast.param1,[fast.param2])
+                                    Ticket = riden7.reissueGroupTicket(fast.param1)
+                                except:
+                                    pass
+                return
+
+            if JSMID8 in fast.param3:
+              if fast.param2 in RfuBot:
+                if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+                    pass
+                else:
+                    Squad["Blacklist"][fast.param2] = True
+                    f=codecs.open('st2__b.json','w','utf-8')
+                    json.dump(Squad, f, sort_keys=True, indent=4,ensure_ascii=False)
+                    try:
+                        riden9.findAndAddContactsByMid(fast.param3)
+                        riden9.kickoutFromGroup(fast.param1,[fast.param2])
+                        riden9.inviteIntoGroup(fast.param1,[fast.param3])
+                        riden8.acceptGroupInvitation(fast.param1)
+                    except:
+                        try:
+                            riden10.findAndAddContactsByMid(fast.param3)
+                            riden10.kickoutFromGroup(fast.param1,[fast.param2])
+                            riden10.inviteIntoGroup(fast.param1,[fast.param3])
+                            riden8.acceptGroupInvitation(fast.param1)
+                        except:
+                            try:
+                                riden2.findAndAddContactsByMid(fast.param3)
+                                riden2.kickoutFromGroup(fast.param1,[fast.param2])
+                                riden2.inviteIntoGroup(fast.param1,[fast.param3])
+                                riden8.acceptGroupInvitation(fast.param1)
+                            except:
+                                try:
+                                    x = riden3.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = False
+                                    riden3.updateGroup(x)
+                                    Riden = riden3.reissueGroupTicket(fast.param1)
+                                    riden8.acceptGroupInvitationByTicket(fast.param1,Riden)
+                                    x = riden8.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = True
+                                    riden8.updateGroup(x)
+                                    riden3.kickoutFromGroup(fast.param1,[fast.param2])
+                                    Ticket = riden8.reissueGroupTicket(fast.param1)
+                                except:
+                                    pass
+                return
+
+            if JSMID9 in fast.param3:
+              if fast.param2 in RfuBot:
+                if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+                    pass
+                else:
+                    Squad["Blacklist"][fast.param2] = True
+                    f=codecs.open('st2__b.json','w','utf-8')
+                    json.dump(Squad, f, sort_keys=True, indent=4,ensure_ascii=False)
+                    try:
+                        riden10.findAndAddContactsByMid(fast.param3)
+                        riden10.kickoutFromGroup(fast.param1,[fast.param2])
+                        riden10.inviteIntoGroup(fast.param1,[fast.param3])
+                        riden9.acceptGroupInvitation(fast.param1)
+                    except:
+                        try:
+                            riden1.findAndAddContactsByMid(fast.param3)
+                            riden1.kickoutFromGroup(fast.param1,[fast.param2])
+                            riden1.inviteIntoGroup(fast.param1,[fast.param3])
+                            riden9.acceptGroupInvitation(fast.param1)
+                        except:
+                            try:
+                                riden4.findAndAddContactsByMid(fast.param3)
+                                riden4.kickoutFromGroup(fast.param1,[fast.param2])
+                                riden4.inviteIntoGroup(fast.param1,[fast.param3])
+                                riden9.acceptGroupInvitation(fast.param1)
+                            except:
+                                try:
+                                    x = riden5.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = False
+                                    riden5.updateGroup(x)
+                                    Riden = riden5.reissueGroupTicket(fast.param1)
+                                    riden9.acceptGroupInvitationByTicket(fast.param1,Riden)
+                                    x = riden9.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = True
+                                    riden9.updateGroup(x)
+                                    riden5.kickoutFromGroup(fast.param1,[fast.param2])
+                                    Ticket = riden9.reissueGroupTicket(fast.param1)
+                                except:
+                                    pass
+                return
+
+            if JSMID10 in fast.param3:
+              if fast.param2 in RfuBot:
+                if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+                    pass
+                else:
+                    Squad["Blacklist"][fast.param2] = True
+                    f=codecs.open('st2__b.json','w','utf-8')
+                    json.dump(Squad, f, sort_keys=True, indent=4,ensure_ascii=False)
+                    try:
+                        riden7.findAndAddContactsByMid(fast.param3)
+                        riden7.kickoutFromGroup(fast.param1,[fast.param2])
+                        riden7.inviteIntoGroup(fast.param1,[fast.param3])
+                        riden10.acceptGroupInvitation(fast.param1)
+                    except:
+                        try:
+                            riden8.findAndAddContactsByMid(fast.param3)
+                            riden8.kickoutFromGroup(fast.param1,[fast.param2])
+                            riden8.inviteIntoGroup(fast.param1,[fast.param3])
+                            riden10.acceptGroupInvitation(fast.param1)
+                        except:
+                            try:
+                                riden6.findAndAddContactsByMid(fast.param3)
+                                riden6.kickoutFromGroup(fast.param1,[fast.param2])
+                                riden6.inviteIntoGroup(fast.param1,[fast.param3])
+                                riden10.acceptGroupInvitation(fast.param1)
+                            except:
+                                try:
+                                    x = riden9.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = False
+                                    riden9.updateGroup(x)
+                                    Riden = riden9.reissueGroupTicket(fast.param1)
+                                    riden10.acceptGroupInvitationByTicket(fast.param1,Riden)
+                                    x = riden10.getGroup(fast.param1)
+                                    x.preventedJoinByTicket = True
+                                    riden10.updateGroup(x)
+                                    riden9.kickoutFromGroup(fast.param1,[fast.param2])
+                                    Ticket = riden10.reissueGroupTicket(fast.param1)
+                                except:
+                                    pass
+                return
+
+        if fast.type == 13:
+          if fast.param3 in Squad["Blacklist"]: # AUTO KICK JIKA YG DI BLACKLIST MASUK
+            if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+                random.choice(Rfu).cancelGroupInvitation(fast.param1,[fast.param3])
+                random.choice(Rfu).kickoutFromGroup(fast.param1,[fast.param2])
+                random.choice(Rfu).kickoutFromGroup(fast.param1,[fast.param3])
+                G = random.choice(Rfu).getGroup(fast.param1)
+                G.preventedJoinByTicket = True
+                random.choice(Rfu).updateGroup(G)
+                random.choice(Rfu).sendMessage(fast.param1, None, contentMetadata={'mid': fast.param2}, contentType=13)
+                random.choice(Rfu).sendMessage(fast.param1, "User Added Blacklist, Please to Unfollow blacklist first.\n")
+
+#---------------------------------- SCRIP PROTECT GRUP -------------------------------------#
+
+        if fast.type == 19:
+            if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+                if fast.param2 in RfuBot:
+                    pass
+                elif RfuProtect["protect"] == True:
+                    random.choice(Rfu).kickoutFromGroup(fast.param1,[fast.param2])
+                    cl.findAndAddContactsByMid(fast.param3)
+                    cl.inviteIntoGroup(fast.param1,[fast.param3])
+                    Squad["Blacklist"][fast.param2] = True
+                    random.choice(Rfu).sendMessage(fast.param1, None, contentMetadata={'mid': fast.param2}, contentType=13)
+                    random.choice(Rfu).sendMessage(fast.param1, "User Added Blacklist (*-_-)/")
+
+        if fast.type == 11:
+            if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+                if fast.param2 in RfuBot:
+                    pass
+                elif RfuProtect["linkprotect"] == True:
+                    Squad["Blacklist"][fast.param2] = True
+                    G = random.choice(Rfu).getGroup(fast.param1)
+                    G.preventedJoinByTicket = True
+                    random.choice(Rfu).updateGroup(G)
+                    random.choice(Rfu).kickoutFromGroup(fast.param1,[fast.param2])
+                    Squad["Blacklist"][fast.param2] = True
+
+        if fast.type == 13:
+          if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+            if fast.param2 in RfuBot:
+                pass
+            elif RfuProtect["inviteprotect"] == True:
+                Squad["Blacklist"][fast.param2] = True
+                random.choice(Rfu).cancelGroupInvitation(fast.param1,[fast.param3])
+                random.choice(Rfu).kickoutFromGroup(fast.param1,[fast.param2])
+                random.choice(Rfu).kickoutFromGroup(fast.param1,[fast.param3])
+                random.choice(Rfu).sendMessage(fast.param1, None, contentMetadata={'mid': fast.param2}, contentType=13)
+                random.choice(Rfu).sendMessage(fast.param1, "User Added Blacklist (*-_-)/")
+                G = random.choice(Rfu).getGroup(fast.param1)
+                G.preventedJoinByTicket = True
+                random.choice(Rfu).updateGroup(G)
+                if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+                    if fast.param2 in RfuBot:
+                        pass
+                    elif RfuProtect["inviteprotect"] == True:
+                        Squad["Blacklist"][fast.param2] = True
+                        random.choice(Rfu).cancelGroupInvitation(fast.param1,[fast.param3])
+                        random.choice(Rfu).kickoutFromGroup(fast.param1,[fast.param2])
+                        random.choice(Rfu).kickoutFromGroup(fast.param1,[fast.param3])
+                        random.choice(Rfu).sendMessage(fast.param1, None, contentMetadata={'mid': fast.param2}, contentType=13)
+                        random.choice(Rfu).sendMessage(fast.param1, "User Added Blacklist (*-_-)/")
+                        G = random.choice(Rfu).getGroup(fast.param1)
+                        G.preventedJoinByTicket = True
+                        random.choice(Rfu).updateGroup(G)
+                        if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+                            if fast.param2 in RfuBot:
+                                pass
+                            elif RfuProtect["cancelprotect"] == True:
+                                Squad["Blacklist"][fast.param2] = True
+                                random.choice(Rfu).cancelGroupInvitation(fast.param1,[fast.param3])
+                                random.choice(Rfu).kickoutFromGroup(fast.param1,[fast.param3])
+                                random.choice(Rfu).sendMessage(fast.param1, None, contentMetadata={'mid': fast.param2}, contentType=13)
+                                random.choice(Rfu).sendMessage(fast.param1, "User Added Blacklist (*-_-)/")
+                                G = random.choice(Rfu).getGroup(fast.param1)
+                                G.preventedJoinByTicket = True
+                                random.choice(Rfu).updateGroup(G)
+
+        if fast.type == 32:
+            if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+                if fast.param2 in RfuBot:
+                    pass
+                elif RfuProtect["ProtectCancelled"] == True:
+                    random.choice(Rfu).kickoutFromGroup(fast.param1,[fast.param2])
+                    cl.findAndAddContactsByMid(fast.param3)
+                    cl.inviteIntoGroup(fast.param1,[fast.param3])
+                    Squad["Blacklist"][fast.param2] = True
+                    random.choice(Rfu).sendMessage(fast.param1, None, contentMetadata={'mid': fast.param2}, contentType=13)
+                    random.choice(Rfu).sendMessage(fast.param1, "User Added Blacklist (*-_-)/")
+
+        if fast.type == 19:
+            if fast.param3 in Squad["Admin"]:        # JIKA ADMIN KE KICK
+              if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+                  random.choice(Rfu).kickoutFromGroup(fast.param1,[fast.param2])
+                  riden1.findAndAddContactsByMid(fast.param3)
+                  riden1.inviteIntoGroup(fast.param1,[fast.param3])
+                  G = random.choice(Rfu).getGroup(fast.param1)
+                  G.preventedJoinByTicket = True
+                  random.choice(Rfu).updateGroup(G)
+                  Squad["Blacklist"][fast.param2] = True
+                  riden1.sendMessage(fast.param1, None, contentMetadata={'mid': fast.param2}, contentType=13)
+                  riden1.sendMessage(fast.param1, "User Added Blacklist (*-_-)/")
+
+        if fast.type == 13:
+          if fast.param2 and fast.param3 in Squad["Blacklist"]: # AUTO KICK JIKA YG DI BLACKLIST MASUK
+            if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+                random.choice(Rfu).cancelGroupInvitation(fast.param1,[fast.param3])
+                random.choice(Rfu).kickoutFromGroup(fast.param1,[fast.param2])
+                random.choice(Rfu).kickoutFromGroup(fast.param1,[fast.param3])
+                G = random.choice(Rfu).getGroup(fast.param1)
+                G.preventedJoinByTicket = True
+                random.choice(Rfu).updateGroup(G)
+                random.choice(Rfu).sendMessage(fast.param1, None, contentMetadata={'mid': fast.param2}, contentType=13)
+                random.choice(Rfu).sendMessage(fast.param1, "User Added Blacklist, Please to Unfollow blacklist first.\n")
+
+        if fast.type == 17:
+          if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+            if fast.param2 in Squad["Blacklist"]: # AUTO KICK JIKA YG DI BLACKLIST MASUK
+                random.choice(Rfu).kickoutFromGroup(fast.param1,[fast.param2])
+                G = random.choice(Rfu).getGroup(fast.param1)
+                G.preventedJoinByTicket = True
+                random.choice(Rfu).updateGroup(G)
+                Squad["Blacklist"][op.param2] = True
+                random.choice(Rfu).sendMessage(fast.param1, None, contentMetadata={'mid': fast.param2}, contentType=13)
+                random.choice(Rfu).sendMessage(fast.param1, "User Added Blacklist, Please to Unfollow blacklist first.\n")
+
+        if fast.type == 55:
+          if fast.param2 not in RfuSekawan and fast.param2 not in Owner and fast.param2 not in Squad["Admin"]:
+            if fast.param2 in Squad["Blacklist"]: # AUTO KICK JIKA YG DI BLACKLIST MASUK
+                random.choice(Rfu).kickoutFromGroup(fast.param1,[fast.param2])
+                G = random.choice(Rfu).getGroup(fast.param1)
+                G.preventedJoinByTicket = True
+                random.choice(Rfu).updateGroup(G)
+                Squad["Blacklist"][op.param2] = True
+                random.choice(Rfu).sendMessage(fast.param1, None, contentMetadata={'mid': fast.param2}, contentType=13)
+                random.choice(Rfu).sendMessage(fast.param1, "User Added Blacklist, Please to Unfollow blacklist first.\n")
+
         if fast.type == 46:
             if fast.param2 in RfuBot:
                 cl.removeAllMessages()
+                riden1.removeAllMessages()
+                riden2.removeAllMessages()
+                riden3.removeAllMessages()
+                riden4.removeAllMessages()
+                riden5.removeAllMessages()
+                riden6.removeAllMessages()
+                riden7.removeAllMessages()
+                riden8.removeAllMessages()
+                riden9.removeAllMessages()
+                riden10.removeAllMessages()
 
 #------------------- ( 2 ) ------------------------- PEMBATAS SCRIP ------------------------------------------------#
 
@@ -363,8 +1089,18 @@ def RIDEN_FAST_USER(fast):
                 elif msg.toType == 2:
                     to = kirim
                 if msg.contentType == 0:
-                    if Squad["AutoRead"] == True:
+                    if Squad["autoRead"] == True:
                         cl.sendChatChecked(kirim, msg_id)
+                        riden1.sendChatChecked(kirim, msg_id)
+                        riden2.sendChatChecked(kirim, msg_id)
+                        riden3.sendChatChecked(kirim, msg_id)
+                        riden4.sendChatChecked(kirim, msg_id)
+                        riden5.sendChatChecked(kirim, msg_id)
+                        riden6.sendChatChecked(kirim, msg_id)
+                        riden7.sendChatChecked(kirim, msg_id)
+                        riden8.sendChatChecked(kirim, msg_id)
+                        riden9.sendChatChecked(kirim, msg_id)
+                        riden10.sendChatChecked(kirim, msg_id)
                     if kirim in Squad["readPoint"]:
                         if user not in Squad["ROM"][kirim]:
                             Squad["ROM"][kirim][user] = True
@@ -380,55 +1116,53 @@ def RIDEN_FAST_USER(fast):
                             cl.log(" {} - {} ".format(str(kirim), str(rfuText)))
                             msg_dict[msg.id] = {"rider": rfuText, "pelaku": user, "createdTime": msg.createdTime, "contentType": msg.contentType, "contentMetadata": msg.contentMetadata}
                     if Squad["Timeline"] == True:
-                      if msg.contentType == 16:
-                          ret_ = "[ INFORMASI TIMELINE ]\n"
-                          if msg.contentMetadata["serviceType"] == "GB":
-                              contact = cl.getContact(user).displayName
-                              auth = "\nPenulis : {}".format(str(contact.displayName))
-                          else:
-                              auth = "\nPenulis : {}".format(str(msg.contentMetadata["serviceName"]))
-                              ret_ += auth
-                          if "stickerId" in msg.contentMetadata:
-                              stck = "\n Stiker : https://line.me/R/shop/detail/{}".format(str(msg.contentMetadata["packageId"]))
-                              ret_ += stck
-                          if "mediaOid" in msg.contentMetadata:
-                              object_ = msg.contentMetadata["mediaOid"].replace("svc=myhome|sid=h|","")
-                              if msg.contentMetadata["mediaType"] == "V":
-                                  if msg.contentMetadata["serviceType"] == "GB":
-                                      ourl = "\n\nLink Objek : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(msg.contentMetadata["mediaOid"]))
-                                      murl = "\n\nLink Media : https://obs-us.line-apps.com/myhome/h/download.nhn?{}".format(str(msg.contentMetadata["mediaOid"]))
-                                  else:
-                                      ourl = "\n\nLink Objek : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(object_))
-                                      murl = "\n\nLink Media : https://obs-us.line-apps.com/myhome/h/download.nhn?{}".format(str(object_))
-                                  ret_ += murl
-                              else:
-                                  if msg.contentMetadata["serviceType"] == "GB":
-                                      ourl = "\n\nLink Objek : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(msg.contentMetadata["mediaOid"]))
-                                  else:
-                                      ourl = "\n\nLink Objek : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(object_))
-                              ret_ += ourl
-                          if "text" in msg.contentMetadata:
-                              dia = cl.getContact(user)
-                              zx = ""
-                              zxc = ""
-                              zx2 = []
-                              xpesan = 'Pengirim: '
-                              ardian = str(dia.displayName)
-                              pesan = ''
-                              pesan2 = pesan+"@ARDIAN_GANTENG\n"
-                              xlen = str(len(zxc)+len(xpesan))
-                              xlen2 = str(len(zxc)+len(pesan2)+len(xpesan)-1)
-                              zx = {'S':xlen, 'E':xlen2, 'M':dia.mid}
-                              zx2.append(zx)
-                              kata = "\n\nText Type : {}".format(str(msg.contentMetadata["text"]))
-                              purl = "\n\nLink Post : {}".format(str(msg.contentMetadata["postEndUrl"]).replace("line://","https://line.me/R/"))
-                              ret_ += purl
-                              ret_ += kata
-                              zxc += pesan2
-                              pesan = xpesan + zxc + ret_ + ""
-                              cl.sendMessage(kirim, pesan, contentMetadata={'MENTION':str('{"MENTIONEES":'+json.dumps(zx2).replace(' ','')+'}')}, contentType=0)
-                              url = msg.contentMetadata["postEndUrl"]
-                              cl.likePost(url[25:58], url[66:], likeType=1001)
+                       if msg.contentType == 16:
+                            ret_ = "Info Postingan\n"
+                            if msg.contentMetadata["serviceType"] == "GB":
+                                contact = cl.getContact(user)
+                                auth = "\n Penulis : {}".format(str(contact.displayName))
+                            else:
+                                auth = "\n Penulis : {}".format(str(contact.displayName))
+                                ret_ += auth
+                            if "stickerId" in msg.contentMetadata:
+                                stck = "\n Stiker : https://line.me/R/shop/detail/{}".format(str(msg.contentMetadata["packageId"]))
+                                ret_ += stck
+                            if "mediaOid" in msg.contentMetadata:
+                                object_ = msg.contentMetadata["mediaOid"].replace("svc=myhome|sid=h|","")
+                                if msg.contentMetadata["mediaType"] == "V":
+                                    if msg.contentMetadata["serviceType"] == "GB":
+                                        ourl = "\n Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(msg.contentMetadata["mediaOid"]))
+                                        murl = "\n Media URL : https://obs-us.line-apps.com/myhome/h/download.nhn?{}".format(str(msg.contentMetadata["mediaOid"]))
+                                    else:
+                                        ourl = "\n Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(object_))
+                                        murl = "\n Media URL : https://obs-us.line-apps.com/myhome/h/download.nhn?{}".format(str(object_))
+                                    ret_ += murl
+                                else:
+                                    if msg.contentMetadata["serviceType"] == "GB":
+                                        ourl = "\n Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(msg.contentMetadata["mediaOid"]))
+                                    else:
+                                        ourl = "\n Objek URL : https://obs-us.line-apps.com/myhome/h/download.nhn?tid=612w&{}".format(str(object_))
+                                ret_ += ourl
+                            if "text" in msg.contentMetadata:
+                                dia = cl.getContact(user)
+                                zx = ""
+                                zxc = ""
+                                zx2 = []
+                                xpesan = 'Pengirim: '
+                                xteam = str(dia.displayName)
+                                pesan = ''
+                                pesan2 = pesan+"@ARDIAN_GANTENG\n"
+                                xlen = str(len(zxc)+len(xpesan))
+                                xlen2 = str(len(zxc)+len(pesan2)+len(xpesan)-1)
+                                zx = {'S':xlen, 'E':xlen2, 'M':dia.mid}
+                                zx2.append(zx)
+                                kata = "\n Tulisan : {}".format(str(msg.contentMetadata["text"]))
+                                purl = "\n Post URL : {}".format(str(msg.contentMetadata["postEndUrl"]).replace("line://","https://line.me/R/"))
+                                ret_ += purl
+                                ret_ += kata
+                                zxc += pesan2
+                                pesan = xpesan + zxc + ret_ + ""
+                                cl.sendMessage(kirim, pesan, contentMetadata={'MENTION':str('{"MENTIONEES":'+json.dumps(zx2).replace(' ','')+'}')}, contentType=0)
 
         if fast.type == 65:
           if Squad['UnsendPesan'] == True:
@@ -462,7 +1196,7 @@ def RIDEN_FAST_USER(fast):
                 else:
                     pass
 
-        if fast.type == 25:
+        if fast.type == 25 or fast.type == 26:
             msg = fast.message
             user = msg._from
             kirim = msg.to
@@ -474,7 +1208,46 @@ def RIDEN_FAST_USER(fast):
                     cl.mentionWithRFU(kirim,user," Update Picture Success ","")
                     Squad['Upfoto'] = False
 
-        if fast.type == 25:
+        if fast.type == 25 or fast.type == 26:
+            msg = fast.message
+            user = msg._from
+            kirim = msg.to
+            if msg.contentType == 1:
+              if Squad['UpfotoBot'] == True:
+                if user in RfuSekawan or user in Squad["Admin"]:
+                    path1 = riden1.downloadObjectMsg(msg.id)
+                    path2 = riden2.downloadObjectMsg(msg.id)
+                    path3 = riden3.downloadObjectMsg(msg.id)
+                    path4 = riden4.downloadObjectMsg(msg.id)
+                    path5 = riden5.downloadObjectMsg(msg.id)
+                    path6 = riden6.downloadObjectMsg(msg.id)
+                    path7 = riden7.downloadObjectMsg(msg.id)
+                    path8 = riden8.downloadObjectMsg(msg.id)
+                    path9 = riden9.downloadObjectMsg(msg.id)
+                    path10 = riden10.downloadObjectMsg(msg.id)
+                    riden1.updateProfilePicture(path1)
+                    riden2.updateProfilePicture(path2)
+                    riden3.updateProfilePicture(path3)                    
+                    riden4.updateProfilePicture(path4)
+                    riden5.updateProfilePicture(path5)
+                    riden6.updateProfilePicture(path6)                    
+                    riden7.updateProfilePicture(path7)
+                    riden8.updateProfilePicture(path8)                    
+                    riden9.updateProfilePicture(path9)
+                    riden10.updateProfilePicture(path10)
+                    riden1.mentionWithRFU(kirim,user," Update Picture Success ","")
+                    riden2.mentionWithRFU(kirim,user," Update Picture Success ","")
+                    riden3.mentionWithRFU(kirim,user," Update Picture Success ","")                    
+                    riden4.mentionWithRFU(kirim,user," Update Picture Success ","")
+                    riden5.mentionWithRFU(kirim,user," Update Picture Success ","")
+                    riden6.mentionWithRFU(kirim,user," Update Picture Success ","")                    
+                    riden7.mentionWithRFU(kirim,user," Update Picture Success ","")
+                    riden8.mentionWithRFU(kirim,user," Update Picture Success ","")
+                    riden9.mentionWithRFU(kirim,user," Update Picture Success ","")
+                    riden10.mentionWithRFU(kirim,user," Update Picture Success ","")
+                    Squad['UpfotoBot'] = False
+
+        if fast.type == 25 or fast.type == 26:
             msg = fast.message
             user = msg._from
             kirim = msg.to
@@ -485,26 +1258,6 @@ def RIDEN_FAST_USER(fast):
                     cl.updateGroupPicture(kirim, path)
                     cl.mentionWithRFU(kirim,user," Update Picture Grup Success ","")
                     Squad['UpfotoGroup'] = False
-
-        if fast.type == 5:
-            if Squad["autoAdd"] == True:
-                if (Squad["PesanAdd"] in [""," ","\n",None]):
-                    pass
-                else:
-                    Squad["ContactAdd"][fast.param2] = True
-                    usr = cl.getContact(op.param2)
-                    cl.sendMessage(fast.param1, "Haii {} " + str(Squad["PesanAdd"]).format(usr.displayName))
-                    cl.sendMessage(fast.param1, None, contentMetadata={'mid':INDUK}, contentType=13)
-
-        if fast.type == 5:
-            if Squad['autoBlock'] == True:
-                try:
-                    usr = cl.getContact(op.param2)
-                    cl.sendMessage(fast.param1, "Haii {} Sorry Auto Block , Komen di TL dulu ya kalo akun asli baru di unblock".format(usr.displayName))
-                    cl.talk.blockContact(0, fast.param1)
-                    Squad["Blacklist"][fast.param2] = True
-                except Exception as e:
-                	print (e)
 
         if fast.type in [25,26]:
           if Squad['Contact'] == True:
@@ -527,7 +1280,57 @@ def RIDEN_FAST_USER(fast):
                         cover = ""
                     cl.sendText(kirim,"Nama:\n" + contact.displayName + "\n\nMid:\n" + msg.contentMetadata["mid"] + "\n\nBio:\n" + contact.statusMessage + "\n\nPicture URL\nhttp://dl.profile.line-cdn.net/" + contact.pictureStatus + "\nCover URL:\n" + str(cover))
 
-        if fast.type == 25:
+        if fast.type == 25 or fast.type == 26:
+            msg = fast.message
+            user = msg._from
+            kirim = msg.to
+            if msg.contentType == 13:
+                try:
+                    if user in RfuSekawan or user in Squad["Admin"]:
+                      if Squad["Ban"] == True:
+                        if msg.contentMetadata["mid"] in Squad["Blacklist"]:
+                            name = msg.contentMetadata["displayName"]
+                            cl.sendMessage(kirim, name + str(" Sudah di daftar Blacklist"))
+                            Squad['Ban'] = False
+                        else:
+                            Squad["Blacklist"][msg.contentMetadata["mid"]] = True
+                            name = msg.contentMetadata["displayName"]
+                            cl.sendMessage(kirim, name + str(" Added in Blacklist"))
+                            Squad['Ban'] = False
+                      if Squad["Unban"] == True:
+                        if msg.contentMetadata["mid"] in Squad["Blacklist"]:
+                            del Squad["Blacklist"][msg.contentMetadata["mid"]]
+                            name = msg.contentMetadata["displayName"]
+                            cl.sendMessage(kirim, name + str(" Succes dellete in Blacklist"))
+                            Squad['Unban'] = False
+                        else:
+                            name = msg.contentMetadata["displayName"]
+                            cl.sendMessage(kirim, name + str(" Nothing in Blacklist"))
+                            Squad['Unban'] = False
+                      if Squad["Adminadd"] == True:
+                        if msg.contentMetadata["mid"] in Squad["Admin"]:
+                            name = msg.contentMetadata["displayName"]
+                            cl.sendMessage(kirim, name + str(" Sudah di daftar Admin"))
+                            Squad['Adminadd'] = False
+                        else:
+                            Squad["Admin"][msg.contentMetadata["mid"]] = True
+                            name = msg.contentMetadata["displayName"]
+                            cl.sendMessage(kirim, name + str(" Added in Admin"))
+                            Squad['Adminadd'] = False
+                      if Squad["AdminDel"] == True:
+                        if msg.contentMetadata["mid"] in Squad["Admin"]:
+                            del Squad["Admin"][msg.contentMetadata["mid"]]
+                            name = msg.contentMetadata["displayName"]
+                            cl.sendMessage(kirim, name + str(" Succes dellete in Admin"))
+                            Squad['AdminDel'] = False
+                        else:
+                            name = msg.contentMetadata["displayName"]
+                            cl.sendMessage(kirim, name + str(" Nothing in Admin"))
+                            Squad['AdminDel'] = False
+                except Exception as error:
+                    cl.sendText(kirim, str(error))
+
+        if fast.type == 25 or fast.type == 26:
           if Squad['Invite'] == True:
             msg = fast.message
             user = msg._from
@@ -541,7 +1344,7 @@ def RIDEN_FAST_USER(fast):
                     targets = []
                     for s in groups.members:
                         if _name in s.displayName:
-                            cl.sendText(kirim, _name + " Sudah Berada DiGrup Ini")
+                            cl.sendText(msg.to, _name + " Sudah Berada DiGrup Ini")
                         else:
                             targets.append(invite)
                     if targets == []:
@@ -559,7 +1362,7 @@ def RIDEN_FAST_USER(fast):
                                  Squad['Invite'] = False
                                  break
 
-        if fast.type == 25:
+        if fast.type == 25 or fast.type == 26:
           if Squad['Steal'] == True:
             msg = fast.message
             user = msg._from
@@ -595,7 +1398,7 @@ def RIDEN_FAST_USER(fast):
                                  Squad['Steal'] = False
                                  break
 
-        if fast.type == 25:
+        if fast.type == 25 or fast.type == 26:
           if Squad['KillOn'] == True:
             msg = fast.message
             user = msg._from
@@ -627,7 +1430,7 @@ def RIDEN_FAST_USER(fast):
                                      Squad['KillOn'] = False
                                      break
 
-        if fast.type == 25:
+        if fast.type == 25 or fast.type == 26:
           if Squad['Gift'] == True:
             msg = fast.message
             user = msg._from
@@ -651,6 +1454,9 @@ def RIDEN_FAST_USER(fast):
                         for target in targets:
                             try:
                                 cl.sendMessage(target, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58','PRDTYPE': 'THEME','MSGTPL': '12'}, contentType = 9)
+                                riden1.sendMessage(target, None, contentMetadata={'PRDID': 'a99cbfdf-4672-45c5-b558-eb0d2e6ab777','PRDTYPE': 'THEME','MSGTPL': '12'}, contentType = 9)
+                                riden2.sendMessage(target, None, contentMetadata={'PRDID': 'a99cbfdf-4672-45c5-b558-eb0d2e6ab777','PRDTYPE': 'THEME','MSGTPL': '12'}, contentType = 9)
+                                riden3.sendMessage(target, None, contentMetadata={'PRDID': 'a99cbfdf-4672-45c5-b558-eb0d2e6ab777','PRDTYPE': 'THEME','MSGTPL': '12'}, contentType = 9)
                                 Squad['Gift'] = False
                                 break
                             except:             
@@ -658,7 +1464,7 @@ def RIDEN_FAST_USER(fast):
                                  Squad['Gift'] = False
                                  break
 
-        if fast.type == 25:
+        if fast.type == 25 or fast.type == 26:
           if Squad["Mic"] == True:
             msg = fast.message
             user = msg._from
@@ -689,7 +1495,7 @@ def RIDEN_FAST_USER(fast):
                                  cl.sendText(kirim, 'Silahkan untuk on kan kembali & Send Contact Again\nKami akan memuat ulang program')
                                  break
 
-        if fast.type == 25:
+        if fast.type == 25 or fast.type == 26:
           if Squad["MicDel"] == True:
             msg = fast.message
             user = msg._from
@@ -720,7 +1526,7 @@ def RIDEN_FAST_USER(fast):
                                  cl.sendText(kirim, 'Silahkan untuk on kan kembali & Send Contact Again\nKami akan memuat ulang program')
                                  break
 
-        if fast.type == 25:
+        if fast.type == 25 or fast.type == 26:
           if Squad['Copy'] == True:
             msg = fast.message
             user = msg._from
@@ -758,7 +1564,7 @@ def RIDEN_FAST_USER(fast):
             msg = fast.message
             user = msg._from
             kirim = msg.to
-            if msg.contentType == 0 and user not in INDUK and msg.toType == 2:
+            if msg.contentType == 0 and user not in mid and msg.toType == 2:
                 if "MENTION" in msg.contentMetadata.keys() != None:
                     if Squad['AutoRespon'] == True:
                         contact = cl.getContact(user)
@@ -769,7 +1575,7 @@ def RIDEN_FAST_USER(fast):
                         mention = ast.literal_eval(msg.contentMetadata["MENTION"])
                         mentionees = mention['MENTIONEES']
                         for mention in mentionees:
-                              if mention['M'] in INDUK:
+                              if mention['M'] in mid:
                                   cl.mentionWithRFU(kirim,user,"","" +str(ret_))
                                   break
 
@@ -788,12 +1594,12 @@ def RIDEN_FAST_USER(fast):
                         mention = ast.literal_eval(msg.contentMetadata["MENTION"])
                         mentionees = mention['MENTIONEES']
                         for mention in mentionees:
-                              if mention['M'] in INDUK:
+                              if mention['M'] in mid:
                                   cl.mentionWithRFU(kirim,user,"","" +str(ret_))
                                   cl.kickoutFromGroup(kirim,[user])
                                   break
 
-        if fast.type == 25:
+        if fast.type == 25 or fast.type == 26:
           if Squad['SpamInvite'] == True:
             msg = fast.message
             user = msg._from
@@ -816,15 +1622,28 @@ def RIDEN_FAST_USER(fast):
                         for target in targets:
                             try:
                                 cl.findAndAddContactsByMid(target)
-                                cl.createGroup("RIDEN SPAM GROUP",[target]) # KALAU MAU BUAT BANYAK SILAHKAN TAMBAHIN SESUKA KALIAN :>
-                                cl.createGroup("RIDEN SPAM GROUP",[target]) # HANYA SPAM VIA CONTACT
-                                cl.createGroup("RIDEN SPAM GROUP",[target])
+                                riden1.findAndAddContactsByMid(target)
+                                riden2.findAndAddContactsByMid(target)
+                                riden3.findAndAddContactsByMid(target)
+                                cl.createGroup("【YOU SELF BOT】",[target]) # KALAU MAU BUAT BANYAK SILAHKAN TAMBAHIN SESUKA KALIAN :>
+                                cl.createGroup("【YOU SELF BOT】",[target]) # HANYA SPAM VIA CONTACT
+                                cl.createGroup("【YOU SELF BOT】",[target])
+                                riden1.createGroup("【YOU SELF BOT】",[target])
+                                riden1.createGroup("【YOU SELF BOT】",[target])
+                                riden1.createGroup("【YOU SELF BOT】",[target])
+                                riden2.createGroup("【YOU SELF BOT】",[target])
+                                riden2.createGroup("【YOU SELF BOT】",[target])
+                                riden2.createGroup("【YOU SELF BOT】",[target])
+                                riden3.createGroup("【YOU SELF BOT】",[target])
+                                riden3.createGroup("【YOU SELF BOT】",[target])
+                                riden3.createGroup("【YOU SELF BOT】",[target])
                                 cl.sendText(kirim,"Spam Invite ke " + korban + "\nSUCCESS..")
                                 Squad['SpamInvite'] = False
                             except:             
                                  cl.sendText(kirim, 'Contact error')
                                  Squad['SpamInvite'] = False
                                  break
+
 
 #------------------- ( 3 ) ------------------------- PEMBATAS SCRIP ------------------------------------------------#
 
@@ -841,35 +1660,112 @@ def RIDEN_FAST_USER(fast):
                 elif msg.toType == 2:
                     to = kirim
                 if msg.contentType == 0:
-                    if Squad['AutoRead'] == True:
-                        cl.sendMessage(0, msg_id)
+                    if Squad["autoRead"] == True:
+                        cl.sendChatChecked(0, msg_id)
+
                     elif rfuText is None:
                         return
                     else:               
-                        if rfuText.lower() == '0':
+                        if rfuText.lower() == 'PROSES TRANSISI':
                             cl.sendMessage(0, user)
-                        elif rfuText in ["Me","me"]:
-                            if user in RfuSekawan or user in Squad["Admin"]:
-                                cl.sendMessage(kirim, None, contentMetadata={'mid': user}, contentType=13)
-                                cl.mentionWithRFU(kirim,user," Hay","")
 
-                        elif rfuText in ["Help","help"]:
+                        elif rfuText.lower() == "คท":
+                            if user in RfuSekawan or user in Squad["Admin"]:
+                                cl.sendMessage(kirim, None, contentMetadata={'mid': mid}, contentType=13)
+                                cl.mentionWithRFU(kirim,mid," Hi","")
+
+                        elif rfuText.lower() == "คำสั่ง":
                             if user in RfuSekawan or user in Squad["Admin"]:
                                  cl.sendMessage(kirim, str(Help))
 
-                        elif rfuText in ["Speed","speed"]:
+                        elif rfuText.lower() == "สปีด":
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 no = time.time()
-                                cl.sendText("ue86841a3982b7da6e8094f3c218d79b6", ' ')
+                                cl.sendText("ud3511dd6ed90c47f33234c30640a3bc9", ' ')
                                 elapsed_time = time.time() - no
                                 cl.sendText(kirim, "%s" % (elapsed_time))
+                                no1 = time.time()
+                                riden1.sendText("ud3511dd6ed90c47f33234c30640a3bc9", ' ')
+                                elapsed_time = time.time() - no1
+                                riden1.sendText(kirim, "%s" % (elapsed_time))
+                                no2 = time.time()
+                                riden2.sendText("ud3511dd6ed90c47f33234c30640a3bc9", ' ')
+                                elapsed_time = time.time() - no2
+                                riden2.sendText(kirim, "%s" % (elapsed_time))
+                                no3 = time.time()
+                                riden3.sendText("ud3511dd6ed90c47f33234c30640a3bc9", ' ')
+                                elapsed_time = time.time() - no3
+                                riden3.sendText(kirim, "%s" % (elapsed_time))                                
+                                no4 = time.time()
+                                riden4.sendText("ud3511dd6ed90c47f33234c30640a3bc9", ' ')
+                                elapsed_time = time.time() - no4
+                                riden4.sendText(kirim, "%s" % (elapsed_time))
+                                no5 = time.time()
+                                riden5.sendText("ud3511dd6ed90c47f33234c30640a3bc9", ' ')
+                                elapsed_time = time.time() - no5
+                                riden5.sendText(kirim, "%s" % (elapsed_time))
+                                no6 = time.time()
+                                riden6.sendText("ud3511dd6ed90c47f33234c30640a3bc9", ' ')
+                                elapsed_time = time.time() - no6
+                                riden6.sendText(kirim, "%s" % (elapsed_time))                                
+                                no7 = time.time()
+                                riden7.sendText("ud3511dd6ed90c47f33234c30640a3bc9", ' ')
+                                elapsed_time = time.time() - no7
+                                riden7.sendText(kirim, "%s" % (elapsed_time))
+                                no8 = time.time()
+                                riden8.sendText("ud3511dd6ed90c47f33234c30640a3bc9", ' ')
+                                elapsed_time = time.time() - no8
+                                riden8.sendText(kirim, "%s" % (elapsed_time))
+                                no9 = time.time()
+                                riden9.sendText("ud3511dd6ed90c47f33234c30640a3bc9", ' ')
+                                elapsed_time = time.time() - no9
+                                riden9.sendText(kirim, "%s" % (elapsed_time))
+                                no10 = time.time()
+                                riden10.sendText("ud3511dd6ed90c47f33234c30640a3bc9", ' ')
+                                elapsed_time = time.time() - no10
+                                riden10.sendText(kirim, "%s" % (elapsed_time))
 
-                        elif rfuText in ["Rename","rename"]:
+                        elif rfuText.lower() == "responsename":
                             if user in RfuSekawan or user in Squad["Admin"]:
-                                team1 = cl.getContact(INDUK).displayName
-                                cl.mentionWithRFU(kirim,INDUK," Ready On ","" + str(" ("+team1+")"))
+                                team = cl.getContact(mid).displayName
+                                team1 = riden1.getContact(JSMID1).displayName
+                                team2 = riden2.getContact(JSMID2).displayName
+                                team3 = riden3.getContact(JSMID3).displayName                                
+                                team4 = riden4.getContact(JSMID4).displayName
+                                team5 = riden5.getContact(JSMID5).displayName
+                                team6 = riden6.getContact(JSMID6).displayName                                
+                                team7 = riden7.getContact(JSMID7).displayName
+                                team8 = riden8.getContact(JSMID8).displayName
+                                team9 = riden9.getContact(JSMID9).displayName
+                                team10 = riden10.getContact(JSMID10).displayName
+                                owner = "ud3511dd6ed90c47f33234c30640a3bc9"
+                                cl.mentionWithRFU(kirim,owner," Ready On ","" + str(" ("+team+")"))
+                                riden1.mentionWithRFU(kirim,owner," Ready On ","" + str(" ("+team1+")"))
+                                riden2.mentionWithRFU(kirim,owner," Ready On ","" + str(" ("+team2+")"))
+                                riden3.mentionWithRFU(kirim,owner," Ready On ","" + str(" ("+team3+")"))                                
+                                riden4.mentionWithRFU(kirim,owner," Ready On ","" + str(" ("+team4+")"))
+                                riden5.mentionWithRFU(kirim,owner," Ready On ","" + str(" ("+team5+")"))
+                                riden6.mentionWithRFU(kirim,owner," Ready On ","" + str(" ("+team6+")"))                                
+                                riden7.mentionWithRFU(kirim,owner," Ready On ","" + str(" ("+team7+")"))
+                                riden8.mentionWithRFU(kirim,owner," Ready On ","" + str(" ("+team8+")"))
+                                riden9.mentionWithRFU(kirim,owner," Ready On ","" + str(" ("+team9+")"))
+                                riden10.mentionWithRFU(kirim,owner," Ready On ","" + str(" ("+team10+")"))
 
-                        elif rfuText in ["My team","my team"]:
+                        elif rfuText.lower() == "mybot":
+                            if user in RfuSekawan or user in Squad["Admin"]:
+                               cl.sendMessage(kirim, None, contentMetadata={'mid': mid}, contentType=13)
+                               cl.sendMessage(kirim, None, contentMetadata={'mid': JSMID1}, contentType=13)
+                               cl.sendMessage(kirim, None, contentMetadata={'mid': JSMID2}, contentType=13)
+                               cl.sendMessage(kirim, None, contentMetadata={'mid': JSMID3}, contentType=13)                             
+                               cl.sendMessage(kirim, None, contentMetadata={'mid': JSMID4}, contentType=13)
+                               cl.sendMessage(kirim, None, contentMetadata={'mid': JSMID5}, contentType=13)
+                               cl.sendMessage(kirim, None, contentMetadata={'mid': JSMID6}, contentType=13)
+                               cl.sendMessage(kirim, None, contentMetadata={'mid': JSMID7}, contentType=13)
+                               cl.sendMessage(kirim, None, contentMetadata={'mid': JSMID8}, contentType=13)
+                               cl.sendMessage(kirim, None, contentMetadata={'mid': JSMID9}, contentType=13)
+                               cl.sendMessage(kirim, None, contentMetadata={'mid': JSMID10}, contentType=13)
+
+                        elif rfuText.lower() == "my team":
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 rfu = ""
                                 sekawan = ""
@@ -885,41 +1781,102 @@ def RIDEN_FAST_USER(fast):
                                     sekawan += str(wi) + ". " +cl.getContact(m_id).displayName + "\n"
                                 cl.sendText(kirim,"【さัএπัஞ✵ບิथℓℓҨतΩ】\n\nOwner:\n"+rfu+"\nAdmin:\n"+sekawan+"\n( %s ) 【さัএπัஞ✵ບิथℓℓҨतΩ】" %(str(len(Owner)+len(Squad["Admin"]))))                                
 
-                        elif rfuText.lower().startswith("leaveall grup"):
+                        elif rfuText.lower() == "มา":
+                            if user in RfuSekawan or user in Squad["Admin"]:
+                                X = cl.getGroup(kirim)
+                                X.preventedJoinByTicket = False
+                                cl.updateGroup(X)
+                                invsend = 0
+                                Riden = cl.reissueGroupTicket(kirim)
+                                riden1.acceptGroupInvitationByTicket(kirim,Riden)
+                                riden2.acceptGroupInvitationByTicket(kirim,Riden)
+                                riden3.acceptGroupInvitationByTicket(kirim,Riden)                             
+                                riden4.acceptGroupInvitationByTicket(kirim,Riden)
+                                riden5.acceptGroupInvitationByTicket(kirim,Riden)
+                                riden6.acceptGroupInvitationByTicket(kirim,Riden)                           
+                                riden7.acceptGroupInvitationByTicket(kirim,Riden)
+                                riden8.acceptGroupInvitationByTicket(kirim,Riden)
+                                riden9.acceptGroupInvitationByTicket(kirim,Riden)
+                                riden10.acceptGroupInvitationByTicket(kirim,Riden)
+                                X = cl.getGroup(kirim)
+                                X.preventedJoinByTicket = True
+                                cl.updateGroup(X)
+                                X.preventedJoinByTicket(X)
+                                cl.updateGroup(X)
+
+                        elif rfuText.lower() == "ไป":
+                            if user in RfuSekawan or user in Squad["Admin"]:
+                                ginfo = cl.getGroup(kirim)
+                                owner = "ud3511dd6ed90c47f33234c30640a3bc9"
+                                riden1.mentionWithRFU(kirim,owner," บายๆ ","\n นายท่าน ยู" + str(" ("+ginfo.name+")"))
+                                riden10.leaveGroup(kirim)
+                                riden9.leaveGroup(kirim)
+                                riden8.leaveGroup(kirim)
+                                riden7.leaveGroup(kirim)
+                                riden6.leaveGroup(kirim)
+                                riden5.leaveGroup(kirim)
+                                riden4.leaveGroup(kirim)     
+                                riden3.leaveGroup(kirim)
+                                riden2.leaveGroup(kirim)
+                                riden1.leaveGroup(kirim)
+                                cl.leaveGroup(kirim)
+
+                        elif rfuText.lower() == "leaveall grup":
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 gid = cl.getGroupIdsJoined()
+                                gid = riden1.getGroupIdsJoined()
+                                gid = riden2.getGroupIdsJoined()
+                                gid = riden3.getGroupIdsJoined()                                
+                                gid = riden4.getGroupIdsJoined()
+                                gid = riden5.getGroupIdsJoined()
+                                gid = riden6.getGroupIdsJoined()                                
+                                gid = riden7.getGroupIdsJoined()
+                                gid = riden8.getGroupIdsJoined()
+                                gid = riden9.getGroupIdsJoined()                                
+                                gid = riden10.getGroupIdsJoined()
                                 for i in gid:
                                     cl.leaveGroup(i)
+                                    riden1.leaveGroup(i)
+                                    riden2.leaveGroup(i)
+                                    riden3.leaveGroup(i)                                    
+                                    riden4.leaveGroup(i)
+                                    riden5.leaveGroup(i)
+                                    riden6.leaveGroup(i)
+                                    riden7.leaveGroup(i)                                    
+                                    riden8.leaveGroup(i)
+                                    riden9.leaveGroup(i)
+                                    riden10.leaveGroup(i)
                                     print ("Kicker Leave All group")
 
-                        elif rfuText in ["Kick on","kick on"]:
+                        elif rfuText in ["เตะเปิด"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad["KickOn"] = True
-                                cl.sendText(kirim,"Status:\n{''cancel'':0,''kick'':1}")
-                        elif rfuText in ["Kick off","kick off"]:
+                                cl.sendText(kirim,"สถะนะ:\n{''ยกเลิก'':0,''เตะ'':1}")
+                        elif rfuText in ["เตะปิด"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad["KickOn"] = False
-                                cl.sendText(kirim,"Status:\n{''cancel'':0,''kick'':0}")
+                                cl.sendText(kirim,"สถะนะ:\n{''ยกเลิก'':0,''เตะ'':0}")
 
-                        elif rfuText.lower().startswith("kickall"):
+                        elif rfuText.lower().startswith("ki"):
                             if user in RfuSekawan or user in Squad["Admin"]:
                               if msg.toType == 2:
                                 if Squad["KickOn"]:
-                                    _name = msg.text.replace("kickall","")
+                                    _name = msg.text.replace("Ki","")
                                     gs = cl.getGroup(kirim)
                                     targets = []
                                     for g in gs.members:
                                         if _name in g.displayName:
                                             targets.append(g.mid)
                                     if targets == []:
-                                        cl.sendText(kirim,"Target Not found.")
+                                        cl.sendText(kirim,"ไม่พบเป้าหมาย.")
                                     else:
                                         for target in targets:
                                           if target not in RfuSekawan and target not in Squad["Admin"]:
                                             try:
-                                                klist=[cl]
+                                                klist=[cl,riden1,riden2,riden3,riden4,riden5,riden6,riden7,riden8,riden9,riden10]
                                                 kicker=random.choice(klist)
                                                 kicker.kickoutFromGroup(kirim,[target])
+                                                print (kirim,[g.mid])
                                             except Exception as error:
                                                 cl.sendText(kirim, str(error))
 
@@ -927,7 +1884,7 @@ def RIDEN_FAST_USER(fast):
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 txt = rfuText.split(" ")
                                 jmlh = int(txt[2])
-                                teks = rfuText.replace("Spam "+str(txt[1])+" "+str(jmlh)+" ","")
+                                teks = rfuText.replace("spam "+str(txt[1])+" "+str(jmlh)+" ","")
                                 tulisan = jmlh * (teks+"\n")
                                 if txt[1] == "on":
                                     if jmlh <= 500:
@@ -943,7 +1900,7 @@ def RIDEN_FAST_USER(fast):
 
                         elif rfuText.lower().startswith("cekmid: "):
                             if user in RfuSekawan or user in Squad["Admin"]:
-                                ardian = rfuText.replace("Cekmid: ","")
+                                ardian = rfuText.replace("cekmid: ","")
                                 cl.sendMessage(kirim, None, contentMetadata={'mid': ardian}, contentType=13)
                                 contact = cl.getContact(ardian)
                                 ganteng = cl.getProfileCoverURL(ardian)
@@ -972,21 +1929,21 @@ def RIDEN_FAST_USER(fast):
                                     except:
                                         pass
 
-                        elif rfuText in ["Banlist","banlist"]:
+                        elif rfuText.lower() == "เชคดำ":
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 if Squad["Blacklist"] == {}:
-                                    cl.sendText(kirim,"Nothing in Blacklist")
+                                    cl.sendText(kirim,"ไม่มีคนติดดำ")
                                 else:
-                                    mc = "Daftar Blacklist "
+                                    mc = "คำติดหำ เฮ้ย คนติดดำ "
                                     num=1
                                     ragets = cl.getContacts(Squad["Blacklist"])
                                     for mi_d in ragets:
                                         mc+="\n%i. %s" % (num, mi_d.displayName)
                                         num=(num+1)
-                                    mc+="\n\n Total %i Blacklist " % len(ragets)
+                                    mc+="\n\n จำนวน %i คน " % len(ragets)
                                     cl.sendText(kirim, mc)
 
-                        elif rfuText.lower().startswith("contact ban"):
+                        elif rfuText in ["Contact ban"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                               if Squad["Blacklist"] == {}:
                                   cl.sendText(kirim,"Tidak Ada Blacklist")
@@ -997,27 +1954,36 @@ def RIDEN_FAST_USER(fast):
                                       h = cl.getContact(i)
                                       cl.sendMessage(kirim, None, contentMetadata={'mid': i}, contentType=13)
 
-                        elif rfuText.lower().startswith("clear ban"):
+                        elif rfuText in ["ล้างดำ"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad["Blacklist"] = {}
-                                cl.sendText(kirim,"Succes clear Blacklist is nothing??")
+                                cl.sendText(kirim,"ล้างหำ เฮ้ยๆ ล้างดำเรียบร้อย")
                                 print ("Clear Ban")
 
-                        elif rfuText.lower().startswith("link on"):
+                        elif rfuText in ["ลงดำคท"]:
+                            if user in RfuSekawan or user in Squad["Admin"]:
+                                Squad["Ban"] = True
+                                cl.sendText(kirim,"ลงดำเรียบร้อย..")
+                        elif rfuText in ["Unban:on"]:
+                            if user in RfuSekawan or user in Squad["Admin"]:
+                                Squad["Unban"] = True
+                                cl.sendText(kirim,"ส่งคท..คนที่จะลงดำ..")
+
+                        elif rfuText.lower() == 'เปิดลิ้ง':
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 if msg.toType == 2:
                                     group = cl.getGroup(kirim)
                                     group.preventedJoinByTicket = False
                                     cl.updateGroup(group)
 
-                        elif rfuText.lower().startswith("link off"):
+                        elif rfuText.lower() == 'ปิดลิ้ง':
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 if msg.toType == 2:
                                     group = cl.getGroup(kirim)
                                     group.preventedJoinByTicket = True
                                     cl.updateGroup(group)
 
-                        elif rfuText.lower().startswith("gurl"):
+                        elif rfuText.lower() == 'gurl':
                           if user in RfuSekawan or user in Squad["Admin"]:
                             if msg.toType == 2:
                                 grup = cl.getGroup(kirim)
@@ -1027,20 +1993,20 @@ def RIDEN_FAST_USER(fast):
                                 else:
                                     cl.sendMessage(kirim, "Ketik Link on Dulu kaka")
 
-                        elif rfuText.lower().startswith("gcreator"):
+                        elif rfuText.lower() == 'ใครสร้างกลุ่ม':
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 try:
                                     group = cl.getGroup(kirim)
                                     GS = group.creator.mid
                                     cl.sendMessage(kirim, None, contentMetadata={'mid': GS}, contentType=13)
-                                    cl.mentionWithRFU(kirim,GS,"Group Creator","")
+                                    cl.mentionWithRFU(kirim,GS,"ผู้สร้างกลุ่ม","")
                                     contact = cl.getContact(GS.mid)
                                 except:
                                     W = group.members[0].mid
                                     cl.sendMessage(kirim, None, contentMetadata={'mid': W}, contentType=13)
-                                    cl.mentionWithRFU(kirim,W,"Group Creator","")
+                                    cl.mentionWithRFU(kirim,W,"ผู้สร้างกลุ่ม","")
 
-                        elif rfuText.lower().startswith("invite gcreator"):
+                        elif "invite gcreator" == rfuText:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 try:
                                     group = cl.getGroup(kirim)
@@ -1059,7 +2025,7 @@ def RIDEN_FAST_USER(fast):
                                     cl.inviteIntoGroup(kirim,[W])
                                     cl.mentionWithRFU(kirim,user,"Invite Done","")
 
-                        elif rfuText.lower().startswith("ginfo"):
+                        elif rfuText.lower() == 'ginfo':
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 group = cl.getGroup(kirim)
                                 try:
@@ -1086,19 +2052,19 @@ def RIDEN_FAST_USER(fast):
                                 cuki += "\nGroup Ticket : {}".format(gTicket)
                                 cl.sendMessage(kirim, str(cuki))
 
-                        elif rfuText.lower().startswith("memberlist"):
+                        elif rfuText in ["คนในกลุ่ม"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 kontak = cl.getGroup(kirim)
                                 group = kontak.members
                                 num=1
-                                msgs="LIST MEMBER\n"
+                                msgs="สมาชิกทั้งหมด\n"
                                 for ids in group:
                                     msgs+="\n%i. %s" % (num, ids.displayName)
                                     num=(num+1)
-                                msgs+="\n\nTOTAL MEMBER ( %i )" % len(group)
+                                msgs+="\n\nว้าวๆ อยู่กันครบเลยนะ.. ( %i )" % len(group)
                                 cl.sendText(kirim, msgs)
 
-                        elif rfuText.lower().startswith("blocklist"):
+                        elif rfuText in ["Blocklist"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 blockedlist = cl.getBlockedContactIds()
                                 kontak = cl.getContacts(blockedlist)
@@ -1110,7 +2076,7 @@ def RIDEN_FAST_USER(fast):
                                 msgs+="\n\nTotal Blocked : %i" % len(kontak)
                                 cl.sendText(kirim, msgs)
 
-                        elif rfuText.lower().startswith("friendlist mid"):
+                        elif rfuText in ["Friendlist mid"]: 
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 gruplist = cl.getAllContactIds()
                                 kontak = cl.getContacts(gruplist)
@@ -1122,13 +2088,38 @@ def RIDEN_FAST_USER(fast):
                                 msgs+="\n\nTotal Mid Friend : %i" % len(kontak)
                                 cl.sendText(kirim, msgs)
 
-                        elif rfuText.lower().startswith("group id"):
+                        elif "Grup id" in rfuText:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 saya = rfuText.replace('Grup id','')
                                 gid = cl.getGroup(kirim)
                                 cl.sendText(kirim, "ID Grup : \n" + gid.id + "\nName Grup : \n" + str(gid.name))
 
-                        elif rfuText.lower().startswith("lurking on"):
+                        elif rfuText.lower().startswith("mid"):
+                          if user in RfuSekawan or user in Squad["Admin"]:
+                              try:
+                                  key = eval(msg.contentMetadata["MENTION"])
+                                  u = key["MENTIONEES"][0]["M"]
+                                  cmid = cl.getContact(u).mid
+                                  cl.sendText(kirim, str(cmid))
+                              except Exception as e:
+                                  cl.sendText(kirim, str(e))
+
+                        elif rfuText.lower().startswith("profile"):
+                            if user in RfuSekawan or user in Squad["Admin"]:
+                                key = eval(msg.contentMetadata["MENTION"])
+                                key1 = key["MENTIONEES"][0]["M"]
+                                contact = cl.getContact(key1)
+                                cover = cl.getProfileCoverURL(key1)
+                                path = str(cover)
+                                image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
+                                try:
+                                    cl.sendText(kirim,"Nama :\n" + contact.displayName + "\n\nBio :\n" + contact.statusMessage)
+                                    cl.sendImageWithURL(kirim,image)
+                                    cl.sendImageWithURL(kirim,path)
+                                except Exception as error:
+                                    cl.sendMessage(kirim, str(error))
+
+                        elif rfuText.lower() == 'เปิดจุด':
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
@@ -1171,7 +2162,7 @@ def RIDEN_FAST_USER(fast):
                                         json.dump(Squad, fp, sort_keys=True, indent=4)
                                         cl.sendMessage(kirim, "Set reading point:\n" + readTime)
                                         
-                        elif rfuText.lower().startswith("lurking off"):
+                        elif rfuText.lower() == 'ปิดจุด':
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
@@ -1196,7 +2187,7 @@ def RIDEN_FAST_USER(fast):
                                           pass
                                     cl.sendMessage(kirim, "Delete reading point:\n" + readTime)
                 
-                        elif rfuText.lower().startswith("lurking reset"):
+                        elif rfuText.lower() == 'lurking reset':
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
@@ -1222,7 +2213,7 @@ def RIDEN_FAST_USER(fast):
                                 else:
                                     cl.sendMessage(kirim, "Lurking on dulu kaka..")
                                     
-                        elif rfuText.lower().startswith("lurking read"):
+                        elif rfuText.lower() == 'lurking read':
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
@@ -1266,7 +2257,7 @@ def RIDEN_FAST_USER(fast):
                                 else:
                                     cl.sendMessage(kirim,"Lurking on dulu kaka ??")
 
-                        elif rfuText.lower().startswith("sider on"):
+                        elif rfuText.lower() == 'เปิดแอบ':
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 try:
                                     del RfuCctv['Point2'][kirim]
@@ -1279,7 +2270,7 @@ def RIDEN_FAST_USER(fast):
                                 RfuCctv['Point1'][kirim]=True
                                 cl.sendText(kirim,"Sider Set to On..")
 
-                        elif rfuText.lower().startswith("sider off"):
+                        elif rfuText.lower() == 'ปิดแอบ':
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 if kirim in RfuCctv['Point2']:
                                     RfuCctv['Point1'][kirim]=False
@@ -1287,7 +2278,7 @@ def RIDEN_FAST_USER(fast):
                                 else:
                                     cl.sendText(kirim, "Off not Going")
 
-                        elif rfuText.lower().startswith("mentionall"):
+                        elif rfuText.lower().startswith("แทค"):
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 gname = cl.getGroup(kirim)
                                 local = [contact.mid for contact in gname.members]
@@ -1301,24 +2292,24 @@ def RIDEN_FAST_USER(fast):
                                             com.append({"S":str(sell), "E" :str(sell+6), "M":rid.mid})
                                             sell += 7
                                             hdc += u'@A_RFU\n'
-                                            atas = '\n Halo {} '.format(str(gname.name))
-                                            atas += '\n Halo {} Sekawan'.format(str(len(local)))
+                                            atas = '\n หวัดดี {} '.format(str(gname.name))
+                                            atas += '\n หวัดดี {} หำ เฮ้ยๆ คน'.format(str(len(local)))
                                         cl.sendMessage(kirim, text=hdc + str(atas), contentMetadata={u'MENTION': json.dumps({'MENTIONEES':com})}, contentType=0)
                                 except Exception as error:
                                     cl.sendMessage(kirim, str(error))
 
-                        elif rfuText.lower().startswith("welcome on"):
+                        elif rfuText in ["Welcome on"]:
                           if user in RfuSekawan or user in Squad["Admin"]:
                             if user in RfuSekawan:
                                 Squad['Welcome'] = True
                                 cl.sendText(kirim,"Cek Welcome Already ON")
-                        elif rfuText.lower().startswith("welcome off"):
+                        elif rfuText in ["Welcome off"]:
                           if user in RfuSekawan or user in Squad["Admin"]:
                             if user in RfuSekawan:
                                 Squad['Welcome'] = False
                                 cl.sendText(kirim,"Cek Welcome Already Off")
 
-                        elif rfuText.lower().startswith("changewelcome "):
+                        elif rfuText.lower().startswith("changewelcome: "):
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 teks = rfuText.split(": ")
                                 data = rfuText.replace(teks[0] + ": ","")
@@ -1328,16 +2319,16 @@ def RIDEN_FAST_USER(fast):
                                 except:
                                     cl.sendText(kirim,"Name Error")
 
-                        elif rfuText.lower().startswith("leave on"):
+                        elif rfuText in ["Leave on"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['Leave'] = True
                                 cl.sendText(kirim,"Cek Leave Already ON")
-                        elif rfuText.lower().startswith("leave off"):
+                        elif rfuText in ["Leave off"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['Leave'] = False
                                 cl.sendText(kirim,"Cek Leave Already Off")
 
-                        elif rfuText.lower().startswith("changeleave "):
+                        elif rfuText.lower().startswith("changeleave: "):
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 teks = rfuText.split(": ")
                                 data = rfuText.replace(teks[0] + ": ","")
@@ -1347,7 +2338,7 @@ def RIDEN_FAST_USER(fast):
                                 except:
                                     cl.sendText(kirim,"Name Error")
 
-                        elif rfuText.lower().startswith("runtime"):
+                        elif rfuText.lower() == "runtime":
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 eltime = time.time() - mulai                                
                                 opn = " "+waktu(eltime)
@@ -1355,19 +2346,21 @@ def RIDEN_FAST_USER(fast):
 
                         elif rfuText.lower().startswith("broadcast: "):
                             if user in RfuSekawan or user in Squad["Admin"]:
-                                bc = msg.text.replace("Broadcast: ","")
+                                bc = msg.text.replace("broadcast: ","")
                                 gid = cl.getGroupIdsJoined()
+                                owner = "uc721ad1f11fb7e128453ba5a27424998"
                                 for i in gid:
-                                    cl.mentionWithRFU(i,user," BROADCAST BY:","\n" + str(" ("+bc+")"))
+                                    cl.mentionWithRFU(i,owner," BROADCAST BY:","\n" + str(" ("+bc+")"))
 
                         elif rfuText.lower().startswith("contactbc: "):
                             if user in RfuSekawan or user in Squad["Admin"]:
-                                bc = msg.text.replace("Contactbc: ","")
+                                bc = msg.text.replace("contactbc: ","")
                                 gid = cl.getAllContactIds()
+                                owner = "uc721ad1f11fb7e128453ba5a27424998"
                                 for i in gid:
-                                    cl.mentionWithRFU(i,user," BROADCAST BY:","\n" + str(" ("+bc+")"))
+                                    cl.mentionWithRFU(i,owner," BROADCAST BY:","\n" + str(" ("+bc+")"))
 
-                        elif rfuText.lower().startswith("adminadd "):
+                        elif rfuText.lower().startswith("adminadd"):
                             if user in RfuSekawan:
                                 key = eval(msg.contentMetadata["MENTION"])
                                 key["MENTIONEES"][0]["M"]
@@ -1384,7 +2377,7 @@ def RIDEN_FAST_USER(fast):
                                         except Exception as e:
                                             cl.sendText(kirim, str(error))
 
-                        elif rfuText.lower().startswith("admindell "):
+                        elif rfuText.lower().startswith("admindell"):
                             if user in Owner:
                                 key = eval(msg.contentMetadata["MENTION"])
                                 key["MENTIONEES"][0]["M"]
@@ -1420,28 +2413,147 @@ def RIDEN_FAST_USER(fast):
                                 cl.updateProfile(no1)
                                 cl.sendText(kirim,"My Bio Change To : " + teks)
 
-                        elif rfuText.lower().startswith("remove message"):
+                        elif rfuText.lower().startswith("changenameall: "):
+                            if user in RfuSekawan:
+                                name = rfuText.split(": ")
+                                change = rfuText.replace(name[0] + ": ","")
+                                cll = cl.getProfile()
+                                cll1 = riden1.getProfile()
+                                cll2 = riden2.getProfile()
+                                cll3 = riden3.getProfile()                                
+                                cll4 = riden4.getProfile()
+                                cll5 = riden5.getProfile()
+                                cll6 = riden6.getProfile()
+                                cll7 = riden7.getProfile()
+                                cll8 = riden8.getProfile()
+                                cll9 = riden9.getProfile()
+                                cll10 = riden10.getProfile()
+                                cll.displayName = change
+                                cll1.displayName = change
+                                cll2.displayName = change
+                                cll3.displayName = change                                
+                                cll4.displayName = change
+                                cll5.displayName = change
+                                cll6.displayName = change
+                                cll7.displayName = change                                
+                                cll8.displayName = change
+                                cll9.displayName = change
+                                cll10.displayName = change
+                                cl.updateProfile(cll)
+                                riden1.updateProfile(cll1)
+                                riden2.updateProfile(cll2)
+                                riden3.updateProfile(cll3)                                
+                                riden4.updateProfile(cll4)
+                                riden5.updateProfile(cll5)
+                                riden6.updateProfile(cll6)                                
+                                riden7.updateProfile(cll7)
+                                riden8.updateProfile(cll8)
+                                riden9.updateProfile(cll9)
+                                riden10.updateProfile(cll10)
+                                cl.mentionWithRFU(kirim,user," Update Name Success","\n Change to " + str(change))
+                                riden1.mentionWithRFU(kirim,user," Update Name Success","\n Change to " + str(change))
+                                riden2.mentionWithRFU(kirim,user," Update Name Success","\n Change to " + str(change))
+                                riden3.mentionWithRFU(kirim,user," Update Name Success","\n Change to " + str(change))                                
+                                riden4.mentionWithRFU(kirim,user," Update Name Success","\n Change to " + str(change))
+                                riden5.mentionWithRFU(kirim,user," Update Name Success","\n Change to " + str(change))
+                                riden6.mentionWithRFU(kirim,user," Update Name Success","\n Change to " + str(change))                                
+                                riden7.mentionWithRFU(kirim,user," Update Name Success","\n Change to " + str(change))
+                                riden8.mentionWithRFU(kirim,user," Update Name Success","\n Change to " + str(change))
+                                riden9.mentionWithRFU(kirim,user," Update Name Success","\n Change to " + str(change))
+                                riden10.mentionWithRFU(kirim,user," Update Name Success","\n Change to " + str(change))
+
+                        elif rfuText.lower().startswith("changebioall: "):
+                            if user in RfuSekawan:
+                                proses = rfuText.split(": ")
+                                teks = rfuText.replace(proses[0] + ": ","")
+                                no = cl.getProfile()
+                                no1 = riden1.getProfile()
+                                no2 = riden2.getProfile()
+                                no3 = riden3.getProfile()                                
+                                no4 = riden4.getProfile()
+                                no5 = riden5.getProfile()
+                                no6 = riden6.getProfile()                                
+                                no7 = riden7.getProfile()
+                                no8 = riden8.getProfile()
+                                no9 = riden9.getProfile()
+                                no10 = riden10.getProfile()
+                                no.statusMessage = teks
+                                no1.statusMessage = teks
+                                no2.statusMessage = teks
+                                no3.statusMessage = teks                                
+                                no4.statusMessage = teks
+                                no5.statusMessage = teks
+                                no6.statusMessage = teks
+                                no7.statusMessage = teks
+                                no8.statusMessage = teks
+                                no9.statusMessage = teks
+                                no10.statusMessage = teks
+                                cl.updateProfile(no)
+                                riden1.updateProfile(no1)
+                                riden2.updateProfile(no2)
+                                riden3.updateProfile(no3)                                
+                                riden4.updateProfile(no4)
+                                riden5.updateProfile(no5)
+                                riden6.updateProfile(no6)
+                                riden7.updateProfile(no7)
+                                riden8.updateProfile(no8)
+                                riden9.updateProfile(no9)
+                                riden10.updateProfile(no10)
+                                cl.sendText(kirim,"My Bio Change To : " + teks)
+                                riden1.sendText(kirim,"My Bio Change To : " + teks)
+                                riden2.sendText(kirim,"My Bio Change To : " + teks)
+                                riden3.sendText(kirim,"My Bio Change To : " + teks)                                
+                                riden4.sendText(kirim,"My Bio Change To : " + teks)
+                                riden5.sendText(kirim,"My Bio Change To : " + teks)
+                                riden6.sendText(kirim,"My Bio Change To : " + teks)
+                                riden7.sendText(kirim,"My Bio Change To : " + teks)
+                                riden8.sendText(kirim,"My Bio Change To : " + teks)
+                                riden9.sendText(kirim,"My Bio Change To : " + teks)
+                                riden10.sendText(kirim,"My Bio Change To : " + teks)
+
+                        elif rfuText.lower() == "remove pesan":
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 try:
                                     cl.removeAllMessages(fast.param2)
+                                    riden1.removeAllMessages(fast.param2)
+                                    riden2.removeAllMessages(fast.param2)
+                                    riden3.removeAllMessages(fast.param2)                                    
+                                    riden4.removeAllMessages(fast.param2)
+                                    riden5.removeAllMessages(fast.param2)
+                                    riden6.removeAllMessages(fast.param2)                                    
+                                    riden7.removeAllMessages(fast.param2)
+                                    riden8.removeAllMessages(fast.param2)
+                                    riden9.removeAllMessages(fast.param2)
+                                    riden10.removeAllMessages(fast.param2)
                                     ginfo = cl.getGroup(kirim)
-                                    cl.mentionWithRFU(kirim,user," Remove Message Success ","\n In Grup" + str(" ("+ginfo.name+")"))
+                                    owner = "uc721ad1f11fb7e128453ba5a27424998"
+                                    cl.mentionWithRFU(kirim,owner," Remove Message Success ","\n In Grup" + str(" ("+ginfo.name+")"))
+                                    riden1.mentionWithRFU(kirim,owner," Remove Message Success ","\n In Grup" + str(" ("+ginfo.name+")"))
+                                    riden2.mentionWithRFU(kirim,owner," Remove Message Success ","\n In Grup" + str(" ("+ginfo.name+")"))
+                                    riden3.mentionWithRFU(kirim,owner," Remove Message Success ","\n In Grup" + str(" ("+ginfo.name+")"))                                    
+                                    riden4.mentionWithRFU(kirim,owner," Remove Message Success ","\n In Grup" + str(" ("+ginfo.name+")"))
+                                    riden5.mentionWithRFU(kirim,owner," Remove Message Success ","\n In Grup" + str(" ("+ginfo.name+")"))
+                                    riden6.mentionWithRFU(kirim,owner," Remove Message Success ","\n In Grup" + str(" ("+ginfo.name+")"))
+                                    riden7.mentionWithRFU(kirim,owner," Remove Message Success ","\n In Grup" + str(" ("+ginfo.name+")"))
+                                    riden8.mentionWithRFU(kirim,owner," Remove Message Success ","\n In Grup" + str(" ("+ginfo.name+")"))
+                                    riden9.mentionWithRFU(kirim,owner," Remove Message Success ","\n In Grup" + str(" ("+ginfo.name+")"))
+                                    riden10.mentionWithRFU(kirim,owner," Remove Message Success ","\n In Grup" + str(" ("+ginfo.name+")"))
                                 except:
                                     pass
 
-                        elif rfuText.lower().startswith("restart"):
+                        elif rfuText.lower() == 'รีบอท':
                             if user in RfuSekawan:
-                                cl.sendText(kirim, 'Restarting Server Prosses..')
+                                cl.sendText(kirim, 'กำลังรีบอท ใจเย็ดๆนายท่าน..')
                                 print ("Restarting Server")
                                 restart_program()
 
-                        elif rfuText.lower().startswith("bot logout"):
+                        elif rfuText.lower() == 'ปิดบอท':
                             if user in RfuSekawan:
                                 cl.mentionWithRFU(kirim,user," Akses Off","")
                                 print ("Selfbot Off")
                                 exit(1)
 
-                        elif rfuText.lower().startswith("kick "):
+                        elif rfuText.lower().startswith("เตะ"):
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 key = eval(msg.contentMetadata["MENTION"])
                                 key["MENTIONEES"][0]["M"]
@@ -1453,14 +2565,14 @@ def RIDEN_FAST_USER(fast):
                                         pass
                                     else:
                                         try:
-                                            klist=[cl]
+                                            klist=[cl,riden1,riden2,riden3,riden4,riden5]
                                             kicker=random.choice(klist)
                                             kicker.kickoutFromGroup(kirim,[target])
                                             Squad["Blacklist"][target] = True
                                         except Exception as e:
                                             cl.sendText(kirim, str(error))
 
-                        elif rfuText.lower().startswith("my grup"):
+                        elif rfuText.lower() == 'my grup':
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 groups = cl.groups
                                 ret_ = "GRUP JOIN"
@@ -1472,13 +2584,72 @@ def RIDEN_FAST_USER(fast):
                                 ret_ += "\n\nTOTAL {} GRUP JOIN".format(str(len(groups)))
                                 cl.sendText(kirim, str(ret_))
 
+                        elif rfuText.lower() == 'm1 grup':
+                            if user in RfuSekawan or user in Squad["Admin"]:
+                                groups = riden1.groups
+                                ret_ = "GRUP JOIN"
+                                no = 0 + 1
+                                for gid in groups:
+                                    group = riden1.getGroup(gid)
+                                    ret_ += "\n\n{}. {} ".format(str(no), str(group.name))
+                                    no += 1
+                                ret_ += "\n\nTOTAL {} GRUP JOIN".format(str(len(groups)))
+                                riden1.sendText(kirim, str(ret_))
+
+                        elif rfuText.lower() == 'm2 grup':
+                            if user in RfuSekawan or user in Squad["Admin"]:
+                                groups = riden2.groups
+                                ret_ = "GRUP JOIN"
+                                no = 0 + 1
+                                for gid in groups:
+                                    group = riden2.getGroup(gid)
+                                    ret_ += "\n\n{}. {} ".format(str(no), str(group.name))
+                                    no += 1
+                                ret_ += "\n\nTOTAL {} GRUP JOIN".format(str(len(groups)))
+                                riden2.sendText(kirim, str(ret_))
+
+                        elif rfuText.lower() == 'm3 grup':
+                            if user in RfuSekawan or user in Squad["Admin"]:
+                                groups = riden3.groups
+                                ret_ = "GRUP JOIN"
+                                no = 0 + 1
+                                for gid in groups:
+                                    group = riden3.getGroup(gid)
+                                    ret_ += "\n\n{}. {} ".format(str(no), str(group.name))
+                                    no += 1
+                                ret_ += "\n\nTOTAL {} GRUP JOIN".format(str(len(groups)))
+                                riden3.sendText(kirim, str(ret_))
+
                         elif rfuText.lower().startswith("rejectall grup"):
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 ginvited = cl.getGroupIdsInvited()
+                                ginvited = riden1.getGroupIdsInvited()
+                                ginvited = riden2.getGroupIdsInvited()
+                                ginvited = riden3.getGroupIdsInvited()                                
+                                ginvited = riden4.getGroupIdsInvited()
+                                ginvited = riden5.getGroupIdsInvited()
+                                ginvited = riden6.getGroupIdsInvited()
+                                ginvited = riden7.getGroupIdsInvited()
+                                ginvited = riden8.getGroupIdsInvited()
+                                ginvited = riden9.getGroupIdsInvited()
+                                ginvited = riden10.getGroupIdsInvited()
                                 if ginvited != [] and ginvited != None:
                                     for gid in ginvited:
                                         cl.rejectGroupInvitation(gid)
+                                        riden1.rejectGroupInvitation(gid)
+                                        riden2.rejectGroupInvitation(gid)
+                                        riden3.rejectGroupInvitation(gid)
                                     cl.sendMessage(kirim, "Succes Cancell {} Invite Grup".format(str(len(ginvited))))
+                                    riden1.sendMessage(kirim, "Succes Cancell {} Invite Grup".format(str(len(ginvited))))
+                                    riden2.sendMessage(kirim, "Succes Cancell {} Invite Grup".format(str(len(ginvited))))
+                                    riden3.sendMessage(kirim, "Succes Cancell {} Invite Grup".format(str(len(ginvited))))                                    
+                                    riden4.sendMessage(kirim, "Succes Cancell {} Invite Grup".format(str(len(ginvited))))
+                                    riden5.sendMessage(kirim, "Succes Cancell {} Invite Grup".format(str(len(ginvited))))
+                                    riden6.sendMessage(kirim, "Succes Cancell {} Invite Grup".format(str(len(ginvited))))
+                                    riden7.sendMessage(kirim, "Succes Cancell {} Invite Grup".format(str(len(ginvited))))
+                                    riden8.sendMessage(kirim, "Succes Cancell {} Invite Grup".format(str(len(ginvited))))
+                                    riden9.sendMessage(kirim, "Succes Cancell {} Invite Grup".format(str(len(ginvited))))
+                                    riden10.sendMessage(kirim, "Succes Cancell {} Invite Grup".format(str(len(ginvited))))                                    
                                 else:
                                     cl.sendMessage(kirim, "Nothing Invited")
 
@@ -1486,132 +2657,191 @@ def RIDEN_FAST_USER(fast):
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 try:
                                     hasil = "Status Bot\n"
-                                    if Squad["autoAdd"] == True: hasil += "\nAuto Add ( on )"
-                                    else: hasil += "\nAuto Add ( off )"
-                                    if Squad["autoJoin"] == True: hasil += "\nAuto Join ( on )"
-                                    else: hasil += "\nAuto Join ( off )"
-                                    if Squad["AutoReject"] == True: hasil += "\nAuto Reject Room ( on )"
-                                    else: hasil += "\nAuto Reject Room ( off )"
-                                    if Squad["AutojoinTicket"] == True: hasil += "\nAuto Join Ticket ( on )"
-                                    else: hasil += "\nAuto Join Ticket ( off )"
-                                    if Squad["autoRead"] == True: hasil += "\nAuto Read ( on )"
-                                    else: hasil += "\nAuto Read ( off )"
-                                    if Squad["AutoRespon"] == True: hasil += "\nDetect Mention ( on )"
-                                    else: hasil += "\nDetect Mention ( off )"
-                                    if Squad["KickRespon"] == True: hasil += "\nDetect Mention ( on )"
-                                    else: hasil += "\nDetect Kick Mention ( off )"
-                                    if Squad["Contact"] == True: hasil += "\nCheck Contact ( on )"
-                                    else: hasil += "\nCheck Contact ( off )"
-                                    if Squad["Timeline"] == True: hasil += "\nCheck Post Timeline ( on )"
-                                    else: hasil += "\nCheck Post ( off )"
-                                    if Squad["IDSticker"] == True: hasil += "\nCheck Sticker ( on )"
-                                    else: hasil += "\nCheck Sticker ( off )"
-                                    if Squad["UnsendPesan"] == True: hasil += "\nUnsend Message ( on )"
-                                    else: hasil += "\nUnsend Message ( off )"
-                                    if Squad["KickOn"] == True: hasil += "\nKick All Member ( on )"
-                                    else: hasil += "\nKick All Member ( off )"
-                                    if Squad["SpamInvite"] == True: hasil += "\nSpam invite via contact ( on )"
-                                    else: hasil += "\nSpam invite Via Contact ( off )"
+                                    if Squad["autoAdd"] == True: hasil += "\nAuto Add 🔵 "
+                                    else: hasil += "\nAuto Add 🔴 "
+                                    if Squad["autoJoin"] == True: hasil += "\nAuto Join 🔵 "
+                                    else: hasil += "\nAuto Join 🔴 "
+                                    if Squad["AutoReject"] == True: hasil += "\nAuto Reject Room 🔵 "
+                                    else: hasil += "\nAuto Reject Room 🔴 "
+                                    if Squad["AutojoinTicket"] == True: hasil += "\nAuto Join Ticket 🔵 "
+                                    else: hasil += "\nAuto Join Ticket 🔴 "
+                                    if Squad["autoRead"] == True: hasil += "\nAuto Read  🔵 "
+                                    else: hasil += "\nAuto Read 🔴 "
+                                    if Squad["AutoRespon"] == True: hasil += "\nDetect Mention 🔵 "
+                                    else: hasil += "\nDetect Mention 🔴 "
+                                    if Squad["KickRespon"] == True: hasil += "\nDetect Mention 🔵 "
+                                    else: hasil += "\nDetect Kick Mention 🔴 "
+                                    if Squad["Contact"] == True: hasil += "\nCheck Contact 🔵 "
+                                    else: hasil += "\nCheck Contact 🔴 "
+                                    if Squad["Timeline"] == True: hasil += "\nCheck Post Timeline 🔵 "
+                                    else: hasil += "\nCheck Post 🔴 "
+                                    if Squad["IDSticker"] == True: hasil += "\nCheck Sticker 🔵 "
+                                    else: hasil += "\nCheck Sticker 🔴 "
+                                    if Squad["UnsendPesan"] == True: hasil += "\nUnsend Message 🔵 "
+                                    else: hasil += "\nUnsend Message 🔴 "
+                                    if RfuProtect["protect"] == True: hasil += "\nProtect Grup 🔵 "
+                                    else: hasil += "\nProtect Grup 🔴 "
+                                    if RfuProtect["linkprotect"] == True: hasil += "\nProtect Link Grup 🔵 "
+                                    else: hasil += "\nProtect Link Grup 🔴 "
+                                    if RfuProtect["inviteprotect"] == True: hasil += "\nProtect Invite Grup 🔵 "
+                                    else: hasil += "\nProtect Invite Grup 🔴 "
+                                    if RfuProtect["cancelprotect"] == True: hasil += "\nProtect Cancel Grup 🔵 "
+                                    else: hasil += "\nProtect Cancel Grup 🔴 "
+                                    if RfuProtect["ProtectCancelled"] == True: hasil += "\nProtect Cancel Member 🔵 "
+                                    else: hasil += "\nProtect Cancel Member 🔴 "
+                                    if Squad["BackupBot"] == True: hasil += "\nBackup Bot 🔵 "
+                                    else: hasil += "\nBackup Bot 🔴 "
+                                    if Squad["KickOn"] == True: hasil += "\nKick All Member 🔵 "
+                                    else: hasil += "\nKick All Member 🔴 "
+                                    if Squad["SpamInvite"] == True: hasil += "\nSpam invite via contact 🔵 "
+                                    else: hasil += "\nSpam invite Via Contact 🔴 "
                                     hasil += "\n\nStatus Bot"
                                     cl.sendMessage(kirim, str(hasil))
                                 except Exception as error:
                                     cl.sendMessage(kirim, str(error))
 
-                        elif rfuText.lower().startswith("unsend on"):
+                        elif rfuText in ["Allprotect on"]:
+                            if user in RfuSekawan or user in Squad["Admin"]:
+                                try:
+                                    RfuProtect['protect'] = True
+                                    RfuProtect['linkprotect'] = True
+                                    RfuProtect['inviteprotect'] = True
+                                    RfuProtect['cancelprotect'] = True
+                                    RfuProtect['ProtectCancelled'] = True
+                                    grup = cl.getGroup(kirim)
+                                    cl.sendText(kirim,"AllProtect Already On in Grup : " +str(grup.name))
+                                except Exception as e:
+                                    cl.sendText(kirim, str(error))
+                        elif rfuText in ["Allprotect off"]:
+                            if user in RfuSekawan or user in Squad["Admin"]:
+                                try:
+                                    RfuProtect['protect'] = False
+                                    RfuProtect['linkprotect'] = False
+                                    RfuProtect['inviteprotect'] = False
+                                    RfuProtect['cancelprotect'] = False
+                                    RfuProtect['ProtectCancelled'] = False
+                                    grup = cl.getGroup(kirim)
+                                    cl.sendText(kirim,"AllProtect Already Off in Grup : " +str(grup.name))
+                                except Exception as e:
+                                    cl.sendText(kirim, str(error))
+
+                        elif rfuText in ["Backup on"]:
+                            if user in RfuSekawan or user in Squad["Admin"]:
+                                Squad['BackupBot'] = True
+                                cl.sendText(kirim,"Backup Bot Ready On")
+                        elif rfuText in ["Backup off"]:
+                            if user in RfuSekawan or user in Squad["Admin"]:
+                                Squad['BackupBot'] = False
+                                cl.sendText(kirim,"Backup Bot Nonactive")
+
+                        elif rfuText in ["Unsend on"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['UnsendPesan'] = True
                                 cl.sendText(kirim,"Cek UnsendMessage Set to on..")
-                        elif rfuText.lower().startswith("unsend off"):
+                        elif rfuText in ["Unsend off"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['UnsendPesan'] = False
                                 cl.sendText(kirim,"Cek UnsendMessage Set to off..")
 
-                        elif rfuText.lower().startswith("changepp on"):
+                        elif rfuText in ["Changepp on"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['Upfoto'] = True
                                 cl.sendText(kirim,"Send Pict For UpPict")
-                        elif rfuText.lower().startswith("changepp off"):
+                        elif rfuText in ["Changepp off"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['Upfoto'] = False
                                 cl.sendText(kirim,"Send Pict Already Off")
 
-                        elif rfuText.lower().startswith("cfotogrup on"):
+                        elif rfuText in ["Changeppbot on"]:
+                            if user in RfuSekawan or user in Squad["Admin"]:
+                                Squad['UpfotoBot'] = True
+                                riden1.sendText(kirim,"Send Pict For UpPict")
+                                riden2.sendText(kirim,"Send Pict For UpPict")
+                                riden3.sendText(kirim,"Send Pict For UpPict")
+                        elif rfuText in ["Changeppbot off"]:
+                            if user in RfuSekawan or user in Squad["Admin"]:
+                                Squad['UpfotoBot'] = False
+                                riden1.sendText(kirim,"Send Pict Already Off")
+                                riden2.sendText(kirim,"Send Pict Already Off")
+                                riden3.sendText(kirim,"Send Pict Already Off")
+
+                        elif rfuText in ["Cfotogrup on"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['UpfotoGrup'] = True
                                 cl.sendText(kirim,"Send Pict For Change Foto Grup")
-                        elif rfuText.lower().startswith("cfotogrup off"):
+                        elif rfuText in ["Cfotogrup off"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['UpfotoGrup'] = False
                                 cl.sendText(kirim,"Send Pict Already Off")
 
-                        elif rfuText.lower().startswith("timeline on"):
+                        elif rfuText in ["Timeline on"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['Timeline'] = True
                                 cl.sendText(kirim,"Cek Post Set to on..")
-                        elif rfuText.lower().startswith("timeline off"):
+                        elif rfuText in ["Timeline off"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['Timeline'] = False
                                 cl.sendText(kirim,"Cek Post Set to off..")
 
-                        elif rfuText.lower().startswith("autojoin on"):
+                        elif rfuText in ["เปิดมุดลิ้ง"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['autoJoin'] = True
-                                cl.sendText(kirim,"Join Set To On..")
-                        elif rfuText.lower().startswith("autojoin off"):
+                                cl.sendText(kirim,"เปิดแล้วท่านยู..")
+                        elif rfuText in ["ปิดมุดลิ้ง"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['autoJoin'] = False
-                                cl.sendText(kirim,"Join Set To Off..")
+                                cl.sendText(kirim,"ปิดแล้วท่านยู..")
 
-                        elif rfuText.lower().startswith("autoreject on"):
+                        elif rfuText in ["Autoreject on"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['AutoReject'] = True
                                 cl.sendText(msg.to,"Reject Set To On..")
-                        elif rfuText.lower().startswith("autoreject off"):
+                        elif rfuText in ["Autoreject off"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['AutoReject'] = False
                                 cl.sendText(msg.to,"Reject Set To Off..")
 
-                        elif rfuText.lower().startswith("admin:add-on"):
+                        elif rfuText in ["Admin:add-on"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad["Adminadd"] = True
                                 cl.sendText(kirim,"Send Contact to added Admin..")
-                        elif rfuText.lower().startswith("admin:add-off"):
+                        elif rfuText in ["Admin:add-off"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad["Adminadd"] = False
                                 cl.sendText(kirim,"Send Contact to added Admin in Off..")
 
-                        elif rfuText.lower().startswith("admin:del-on"):
+                        elif rfuText in ["Admin:del-on"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad["AdminDel"] = True
                                 cl.sendText(kirim,"Send Contact to Dellete Admin..")
-                        elif rfuText.lower().startswith("admin:del-off"):
+                        elif rfuText in ["Admin:del-off"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad["AdminDel"] = False
                                 cl.sendText(kirim,"Send Contact to Dellete Admin in Off..")
 
-                        elif rfuText.lower().startswith("gift on"):
+                        elif rfuText in ["Gift:on"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad["Gift"] = True
                                 cl.sendText(kirim,"Send Contact to send Gift..")
-                        elif rfuText.lower().startswith("gift off"):
+                        elif rfuText in ["Gift:off"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad["Gift"] = False
                                 cl.sendText(kirim,"Send Contact to Gift in Off..")
 
-                        elif rfuText.lower().startswith("spaminvite on"):
+                        elif rfuText in ["Spaminvite on"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad["SpamInvite"] = True
                                 cl.sendText(kirim,"Send Contact to spam grup..")
-                        elif rfuText.lower().startswith("spaminvite off"):
+                        elif rfuText in ["Spaminvite off"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad["Gift"] = False
                                 cl.sendText(kirim,"Send Contact to send grup Off..")
 
-                        elif rfuText.lower().startswith("auto jointicket on"):
+                        elif rfuText in ["Auto jointicket on"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad["AutojoinTicket"] = True
                                 cl.sendText(kirim,"Join Ticket Set To On")
-                        elif rfuText.lower().startswith("auto jointicket off"):
+                        elif rfuText in ["Auto jointicket off"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad["AutojoinTicket"] = False
                                 cl.sendText(kirim,"Join Ticket Set To Off")
@@ -1629,11 +2859,11 @@ def RIDEN_FAST_USER(fast):
                                         cl.acceptGroupInvitationByTicket(group.id,ticket_id)
                                         cl.sendText(kirim,"Success Masuk %s" % str(group.name))
 
-                        elif rfuText.lower().startswith("copy on"):
+                        elif rfuText in ["Copy on"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['Copy'] = True
                                 cl.sendText(kirim,"Send Contact For Copy User")
-                        elif rfuText.lower().startswith("copy off"):
+                        elif rfuText in ["Copy off"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['Copy'] = False
                                 cl.sendText(kirim,"Send Contact Already Off")
@@ -1653,7 +2883,7 @@ def RIDEN_FAST_USER(fast):
                                         cl.cloneContactProfile(ls)
                                         cl.sendMessage(kirim, "Berhasil mengclone profile {}".format(contact.displayName))
 
-                        elif rfuText.lower().startswith("comeback"):
+                        elif rfuText.lower() == 'comeback':
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 try:
                                     clProfile.displayName = str(ProfileMe["displayName"])
@@ -1665,29 +2895,29 @@ def RIDEN_FAST_USER(fast):
                                 except:
                                     cl.sendMessage(kirim, "Error Come Back")
 
-                        elif rfuText.lower().startswith("steal on"):
+                        elif rfuText in ["Steal on"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['Steal'] = True
                                 cl.sendText(kirim,"Send Contact For Cek Contact")
-                        elif rfuText.lower().startswith("steal off"):
+                        elif rfuText in ["Steal off"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['Steal'] = False
                                 cl.sendText(kirim,"Send Contact Already Off")
 
-                        elif rfuText.lower().startswith("contact on"):
+                        elif rfuText in ["Contact on"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['Contact'] = True
                                 cl.sendText(kirim,"Contact Set to on")
-                        elif rfuText.lower().startswith("contact off"):
+                        elif rfuText in ["Contact off"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['Contact'] = False
                                 cl.sendText(kirim,"Contact Already Off")
 
-                        elif rfuText.lower().startswith("invite on"):
+                        elif rfuText in ["Invite on"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['Invite'] = True
                                 cl.sendText(kirim,"Send Contact For Invite Target")
-                        elif rfuText.lower().startswith("invite off"):
+                        elif rfuText in ["Invite off"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Squad['Invite'] = False
                                 cl.sendText(kirim,"Send Contact Set Off")
@@ -1701,15 +2931,15 @@ def RIDEN_FAST_USER(fast):
                                 Squad["KillOn"] = False
                                 cl.sendMessage(kirim, "SendContact For Kick Taget in Off")
 
-                        elif rfuText.lower().startswith("mic:add-on"):
+                        elif rfuText in ["Mic:add-on"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Target["Mic"] = True
                                 cl.sendText(kirim,"Send Contact To Clone Message User")
-                        elif rfuText.lower().startswith("mic:del-on"):
+                        elif rfuText in ["Mic:del-on"]:
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 Target["MicDel"] = True
                                 cl.sendText(kirim,"Send Contact Dellete Clone Message User")
-                        elif rfuText.lower().startswith("mimic "):
+                        elif "mimic" in rfuText.lower():
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 sep = rfuText.split(" ")
                                 mic = rfuText.replace(sep[0] + " ","")
@@ -1722,7 +2952,7 @@ def RIDEN_FAST_USER(fast):
                                         Mozilla["mimic"]["status"] = False
                                         cl.sendText(kirim,"Mimic Message off")
 
-                        elif rfuText.lower().startswith("mimiclist"):
+                        elif rfuText.lower() == 'mimiclist':
                             if user in RfuSekawan or user in Squad["Admin"]:
                                 if Mozilla["mimic"]["target"] == {}:
                                     cl.sendText(kirim,"Tidak Ada Target")
@@ -1749,6 +2979,7 @@ def RIDEN_FAST_USER(fast):
                                     Squad['AutoReject'] = False
                                     Squad['Timeline'] = False
                                     Squad['Upfoto'] = False
+                                    Squad['UpfotoBot'] = False
                                     Squad['UpfotoGrup'] = False
                                     Squad['Adminadd'] = False
                                     Squad['AdminDel'] = False
@@ -1784,133 +3015,6 @@ def RIDEN_FAST_USER(fast):
                                 channel = cl.getProfileCoverURL(user)          
                                 path = str(channel)
                                 cl.sendImageWithURL(kirim, path)
-
-                        elif rfuText.lower().startswith("stealname "):
-                            if 'MENTION' in msg.contentMetadata.keys()!= None:
-                                names = re.findall(r'@(\w+)', text)
-                                mention = ast.literal_eval(msg.contentMetadata['MENTION'])
-                                mentionees = mention['MENTIONEES']
-                                lists = []
-                                for mention in mentionees:
-                                    if mention["M"] not in lists:
-                                        lists.append(mention["M"])
-                                for ls in lists:
-                                    contact = cl.getContact(ls)
-                                    cl.sendMessage(to, "[ Display Name ]\n{}".format(str(contact.displayName)))
-                        elif rfuText.lower().startswith("stealbio "):
-                          if user in RfuSekawan or user in Squad["Admin"]:
-                            if 'MENTION' in msg.contentMetadata.keys()!= None:
-                                names = re.findall(r'@(\w+)', text)
-                                mention = ast.literal_eval(msg.contentMetadata['MENTION'])
-                                mentionees = mention['MENTIONEES']
-                                lists = []
-                                for mention in mentionees:
-                                    if mention["M"] not in lists:
-                                        lists.append(mention["M"])
-                                for ls in lists:
-                                    contact = cl.getContact(ls)
-                                    cl.sendMessage(kirim, "[ Status Message ]\n{}".format(str(contact.statusMessage)))
-                        elif rfuText.lower().startswith("stealpict "):
-                          if user in RfuSekawan or user in Squad["Admin"]:
-                            if 'MENTION' in msg.contentMetadata.keys()!= None:
-                                names = re.findall(r'@(\w+)', text)
-                                mention = ast.literal_eval(msg.contentMetadata['MENTION'])
-                                mentionees = mention['MENTIONEES']
-                                lists = []
-                                for mention in mentionees:
-                                    if mention["M"] not in lists:
-                                        lists.append(mention["M"])
-                                for ls in lists:
-                                    contact = cl.getContact(ls)
-                                    path = "http://dl.profile.line.naver.jp/{}".format(contact.pictureStatus)
-                                    cl.sendImageWithURL(kirim, str(path))
-                        elif rfuText.lower().startswith("stealvideo "):
-                          if user in RfuSekawan or user in Squad["Admin"]:
-                            if 'MENTION' in msg.contentMetadata.keys()!= None:
-                                names = re.findall(r'@(\w+)', text)
-                                mention = ast.literal_eval(msg.contentMetadata['MENTION'])
-                                mentionees = mention['MENTIONEES']
-                                lists = []
-                                for mention in mentionees:
-                                    if mention["M"] not in lists:
-                                        lists.append(mention["M"])
-                                for ls in lists:
-                                    contact = cl.getContact(ls)
-                                    path = "http://dl.profile.line.naver.jp/{}/vp".format(contact.pictureStatus)
-                                    cl.sendVideoWithURL(kirim, str(path))
-                        elif rfuText.lower().startswith("stealcover "):
-                          if user in RfuSekawan or user in Squad["Admin"]:
-                            if cl != None:
-                                if 'MENTION' in msg.contentMetadata.keys()!= None:
-                                    names = re.findall(r'@(\w+)', text)
-                                    mention = ast.literal_eval(msg.contentMetadata['MENTION'])
-                                    mentionees = mention['MENTIONEES']
-                                    lists = []
-                                    for mention in mentionees:
-                                        if mention["M"] not in lists:
-                                            lists.append(mention["M"])
-                                    for ls in lists:
-                                        channel = cl.getProfileCoverURL(ls)
-                                        path = str(channel)
-                                        cl.sendImageWithURL(kirim, str(path))
-                        elif rfuText.lower().startswith("stealmid "):
-                          if user in RfuSekawan or user in Squad["Admin"]:
-                              try:
-                                  key = eval(msg.contentMetadata["MENTION"])
-                                  u = key["MENTIONEES"][0]["M"]
-                                  cmid = cl.getContact(u).mid
-                                  cl.sendText(kirim, str(cmid))
-                              except Exception as e:
-                                  cl.sendText(kirim, str(e))
-                        elif rfuText.lower().startswith("profile "):
-                            if user in RfuSekawan or user in Squad["Admin"]:
-                                try:
-                                    key = eval(msg.contentMetadata["MENTION"])
-                                    u = key["MENTIONEES"][0]["M"]
-                                    cname = cl.getContact(u).displayName
-                                    cmid = cl.getContact(u).mid
-                                    cstatus = cl.getContact(u).statusMessage
-                                    cpic = cl.getContact(u).picturePath
-                                    a = cl.getProfileCoverURL(mid=u)
-                                    cl.sendText(kirim, 'Nama : '+cname+'\nMid : '+cmid+'\nBio : '+cstatus+'\nURL Picture : http://dl.profile.line.naver.jp'+cpic)
-                                    cl.sendMessage(kirim, None, contentMetadata={'mid': cmid}, contentType=13)
-                                    cl.sendImageWithURL(kirim, a)
-                                    if "videoProfile='{" in str(cl.getContact(u)):
-                                        cl.sendVideoWithURL(kirim, 'http://dl.profile.line.naver.jp'+cpic+'/vp.small')
-                                    else:
-                                        cl.sendImageWithURL(kirim, 'http://dl.profile.line.naver.jp'+cpic)
-                                except Exception as e:
-                                    cl.sendText(kirim, str(e))
-
-                        elif rfuText.lower().startswith("randomgrup: "):
-                            if user in RfuSekawan or user in Squad["Admin"]:
-                              if msg.toType == 2:
-                                  strnum = rfuText.replace("randomgrup: ","")
-                                  source_str = 'abcdefghijklmnopqrstuvwxyz1234567890@:;./_][!&%$#)(=~^|'
-                                  try:
-                                      num = int(strnum)
-                                      group = cl.getGroup(kirim)
-                                      for var in range(0,num):
-                                          name = "".join([random.choice(source_str) for x in range(10)])
-                                          time.sleep(0.01)
-                                          group.name = name
-                                          cl.updateGroup(group)
-                                  except Exception as e:
-                                      cl.sendText(kirim, str(e))
-
-                        elif rfuText.lower().startswith("annoence"):
-                            if user in RfuSekawan or user in Squad["Admin"]:
-                                try:
-                                    gett = cl.getChatRoomAnnouncements(kirim)
-                                    for a in gett:
-                                        aa = cl.getContact(a.creatorMid).displayName
-                                        bb = a.contents
-                                        cc = bb.link
-                                        textt = bb.text
-                                        cl.sendText(kirim, 'Pemberitahuan Grup\n\nLink: ' + str(cc) + '\nPenulis: ' + str(aa) + '\nTeksnya: ' + str(textt))
-                                        break
-                                except Exception as e:
-                                    cl.sendText(kirim, "Pemberitahuan Grup Tidak Ditemukan")
 
 #------------------------------------------ SOCIAL MEDIA ----------------------------------------------------#
 
